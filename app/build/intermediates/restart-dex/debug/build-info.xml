@@ -4,40 +4,49 @@
     api-level="23"
     density="560dpi"
     format="7"
-    timestamp="90430950433072"
+    timestamp="91974746959958"
     token="-283866633429592068" >
 
     <task
         name="javac"
-        duration="328" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="71" />
+        duration="0" />
     <task
         name="verifier"
-        duration="8" />
+        duration="0" />
 
     <artifact
-        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-        type="DEX" />
+        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
 
     <build timestamp="87284043350295" >
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="90314452088264" >
+    <build timestamp="91913566730342" >
+        <artifact
+            location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
             type="DEX" />
-    </build>
-    <build timestamp="90430950433072" >
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
             type="DEX" />
+        <artifact
+            location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="91974746959958" >
+        <artifact
+            location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

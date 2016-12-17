@@ -16,8 +16,8 @@
     <com.brain_socket.photocafe.view.CarousellViewPager
         android:id="@+id/vpCategories"
         android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="115dp"
         android:layout_gravity="bottom"
-        android:background="@color/brown_dark"></com.brain_socket.photocafe.view.CarousellViewPager>
+        android:background="@color/brown_light"></com.brain_socket.photocafe.view.CarousellViewPager>
 
 </FrameLayout>

@@ -2424,20 +2424,21 @@ containing a value of this type.
         public static final int lang_select_logo=0x7f02007b;
         public static final int minus_icon=0x7f02007c;
         public static final int minus_icon_01=0x7f02007d;
-        public static final int notification_template_icon_bg=0x7f02008b;
+        public static final int notification_template_icon_bg=0x7f02008c;
         public static final int plus_icon=0x7f02007e;
         public static final int shape_brown_dark_button_badge=0x7f02007f;
         public static final int shape_brown_light_button_badge=0x7f020080;
         public static final int shape_cart_icon_bg=0x7f020081;
         public static final int shape_cart_products_count_bg=0x7f020082;
         public static final int shape_cover_place_holder=0x7f020083;
-        public static final int shape_rounded_category_bg=0x7f020084;
-        public static final int shape_rounded_loading_bg=0x7f020085;
-        public static final int shape_transparent=0x7f020086;
-        public static final int side_logo=0x7f020087;
-        public static final int splash_icon=0x7f020088;
-        public static final int tag_icon=0x7f020089;
-        public static final int tilable_doted_line=0x7f02008a;
+        public static final int shape_rounded_category_dark_bg=0x7f020084;
+        public static final int shape_rounded_category_light_bg=0x7f020085;
+        public static final int shape_rounded_loading_bg=0x7f020086;
+        public static final int shape_transparent=0x7f020087;
+        public static final int side_logo=0x7f020088;
+        public static final int splash_icon=0x7f020089;
+        public static final int tag_icon=0x7f02008a;
+        public static final int tilable_doted_line=0x7f02008b;
     }
     public static final class id {
         public static final int action0=0x7f0d0087;

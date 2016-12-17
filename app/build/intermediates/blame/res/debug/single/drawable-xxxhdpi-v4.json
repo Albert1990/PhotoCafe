@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_rounded_category_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_rounded_category_bg.xml"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_carousel.png",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/ic_carousel.png"
     },
@@ -22,6 +18,10 @@
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_cart_products_count_bg.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_cart_products_count_bg.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_rounded_category_dark_bg.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_rounded_category_dark_bg.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/bg_artwork.png",
@@ -114,6 +114,10 @@
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/home_title_decoration.png",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/home_title_decoration.png"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_rounded_category_light_bg.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_rounded_category_light_bg.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_cart_icon_bg.xml",
