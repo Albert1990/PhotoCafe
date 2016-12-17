@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.brain_socket.photocafe.data.DataStore;
 import com.brain_socket.photocafe.data.PhotoProvider;
 import com.brain_socket.photocafe.data.ServerResult;
+import com.brain_socket.photocafe.model.CartProductModel;
 import com.brain_socket.photocafe.model.CategoryModel;
 import com.brain_socket.photocafe.model.OrderModel;
 import com.brain_socket.photocafe.model.ProductModel;
@@ -27,6 +28,7 @@ import com.brain_socket.photocafe.view.RoundedImageView;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DataStore.LanguageChangedListener{
     private RecyclerView rvProducts;
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ArrayList<ProductModel> products;
     private ProductsRecycleViewAdapter productsAdapter;
     private CategoryAdapter categoriesAdapter;
-    private ArrayList<ProductModel> cartProducts;
+    private HashMap<String,CartProductModel> cartProducts;
     private TextView tvCartProductsCount;
     private Dialog loadingDialog;
 
@@ -54,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rvProducts = (RecyclerView)findViewById(R.id.rvProducts);
         vpCategories = (ViewPager)findViewById(R.id.vpCategories);
 
-        cartProducts = new ArrayList<ProductModel>();
+        cartProducts = new HashMap<String,CartProductModel>();
         loadingDialog = PhotoCafeApp.getNewLoadingDilaog(this);
     }
 
@@ -134,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void submitCart(){
         if(cartProducts.size() > 0){
-            loadingDialog.show();;
+            loadingDialog.show();
             DataStore.getInstance().attemptSubmitCart(cartProducts,submitCartCallback);
         }
     }
@@ -221,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 PhotoProvider.getInstance().displayPhotoNormal(model.getImage(), holder.ivProduct);
                 holder.tvProduct.setText(model.getName());
                 holder.tvDescription.setText(model.getDescription());
-                holder.tvPrice.setText(model.getPrice());
+                holder.tvPrice.setText(model.getPriceWithUnti());
                 holder.btnAdd.setTag(position);
                 holder.btnAdd.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -230,7 +232,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             if (products != null) {
                                 int selectedProductIndex = (int) v.getTag();
                                 ProductModel selectedProduct = products.get(selectedProductIndex);
-                                cartProducts.add(selectedProduct);
+                                CartProductModel cartProduct = null;
+                                if(cartProducts.containsKey(selectedProduct.getId()))
+                                {
+                                    cartProduct = cartProducts.get(selectedProduct.getId());
+                                    cartProduct.setQuantity(cartProduct.getQuantity()+1);
+                                    cartProduct.setTotalPrice(cartProduct.getQuantity() * Float.parseFloat(selectedProduct.getPrice()));
+                                }
+                                else {
+                                    cartProduct = new CartProductModel(selectedProduct.getId(),
+                                            1,
+                                            Float.parseFloat(selectedProduct.getPrice()));
+                                    cartProducts.put(selectedProduct.getId(),cartProduct);
+                                }
                                 tvCartProductsCount.setText(Integer.toString(cartProducts.size()));
                             }
                         }catch (Exception ex){

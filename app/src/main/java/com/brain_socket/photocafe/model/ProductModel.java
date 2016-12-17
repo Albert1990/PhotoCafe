@@ -48,7 +48,11 @@ public class ProductModel extends AppBaseModel{
     }
 
     public String getPrice() {
-        return Price+" AED";
+        return Price;
+    }
+
+    public String getPriceWithUnti(){
+        return Price + " AED";
     }
 
     public void setPrice(String price) {

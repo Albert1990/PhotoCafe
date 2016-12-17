@@ -3,11 +3,14 @@ package com.brain_socket.photocafe.data;
 import android.location.Location;
 import android.os.Handler;
 
+import com.brain_socket.photocafe.model.CartProductModel;
 import com.brain_socket.photocafe.model.CategoryModel;
 import com.brain_socket.photocafe.model.ProductModel;
 import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Hashtable;
 
 /**
  * This class will be responsible for requesting new data from the data providers
@@ -227,7 +230,7 @@ public class DataStore {
         }).start();
     }
 
-    public void attemptSubmitCart(final ArrayList<ProductModel> products,final DataRequestCallback callback) {
+    public void attemptSubmitCart(final HashMap<String,CartProductModel> cartProducts, final DataRequestCallback callback) {
         new Thread(new Runnable() {
             @Override
             public void run() {
