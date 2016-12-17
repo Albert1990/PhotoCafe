@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="25dp"
+        android:paddingTop="-10dp"
+        android:src="@drawable/splash_icon"/>
+
+    <Button
+        android:id="@+id/btnArabic"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_brown_dark_button_badge"
+        android:text="@string/activity_language_select_btn_arabic"/>
+
+    <Button
+        android:id="@+id/btnEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btnArabic"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_brown_dark_button_badge"
+        android:text="@string/activity_language_select_btn_english"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/btnArabic"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_white"
+        android:paddingRight="60dp"
+        android:paddingTop="8dp"
+        android:text="@string/activity_splash_screen_copy_right"
+        app:fontId="1"/>
+
+</RelativeLayout>

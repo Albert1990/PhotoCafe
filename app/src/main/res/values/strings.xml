@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PhotoCafe</string>
+
+    <!-- SplashScreenActivity -->
+    <string name="activity_splash_screen_copy_right">Copyrights @ 2016</string>
+
+    <!-- LanguageSelectActivity -->
+    <string name="activity_language_select_title">Select your language</string>
+    <string name="activity_language_select_btn_english">English</string>
+    <string name="activity_language_select_btn_arabic">العربية</string>
+</resources>

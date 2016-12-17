@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.brain_socket.photocafe.view.RoundedImageView
+        android:id="@+id/ivProduct"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:padding="10dp"
+        android:src="@drawable/splash_icon" />
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/ivProduct"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/txt_light_yellow"
+        android:textSize="@dimen/ts_text_normal"
+        android:text="Mocha"
+        app:fontId="1"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/tvProduct"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/txt_light_yellow"
+        android:textSize="@dimen/ts_text_normal"
+        android:text="..................."
+        app:fontId="1"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:maxWidth="250dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivProduct"
+        android:layout_below="@id/tvProduct"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/ts_text_small"
+        android:text="juheufhberfebrf erfbeurfbeurf urufuehrf uhruhtgrgt uhurhtg"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/txt_light_yellow"
+        android:textSize="@dimen/ts_text_normal"
+        android:text="AED 50:00"/>
+
+    <ImageView
+        android:id="@+id/btnAdd"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/btn_add"/>
+
+</RelativeLayout>

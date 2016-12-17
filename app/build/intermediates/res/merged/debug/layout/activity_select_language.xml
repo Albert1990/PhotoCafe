@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/brown_dark"
+    tools:context="com.brain_socket.photocafe.SelectLanguageActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/splash_icon"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvLanguageSelectorLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_white"
+        android:text="@string/activity_language_select_title"
+        app:fontId="1"/>
+
+    <LinearLayout
+        android:id="@+id/llLanguageButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLanguageSelectorLabel"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp">
+        <Button
+            android:id="@+id/btnEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/shape_brown_light_button_badge"
+            android:text="@string/activity_language_select_btn_english"/>
+
+        <Button
+            android:id="@+id/btnArabic"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_brown_light_button_badge"
+            android:text="@string/activity_language_select_btn_arabic"/>
+    </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-150dp"
+            android:layout_marginRight="-180dp"
+            android:src="@drawable/bg_artwork"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/ts_text_small"
+        android:textColor="@color/txt_white"
+        android:text="@string/activity_splash_screen_copy_right"
+        app:fontId="1"/>
+
+</RelativeLayout>
