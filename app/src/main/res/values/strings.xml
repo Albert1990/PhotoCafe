@@ -8,4 +8,21 @@
     <string name="activity_language_select_title">Select your language</string>
     <string name="activity_language_select_btn_english">English</string>
     <string name="activity_language_select_btn_arabic">العربية</string>
+
+    <!-- MainActivity -->
+    <string name="activity_main_activity_no_products">No Foods in this category</string>
+    <string name="activity_main_cart_contents_order_label">Order</string>
+    <string name="activity_main_cart_contents_quantity_label">Quantity</string>
+    <string name="activity_main_cart_contents_reset_button">Reset</string>
+    <string name="activity_main_cart_contents_submit_button">Submit</string>
+    <string name="activity_main_cart_contents_empty">Your cart is empty</string>
+    <string name="activity_main_cart_contents_submit_success">Your order has been submitted</string>
+
+
+    <!-- Diag TableNo -->
+    <string name="diag_table_no_header">Enter your table number please</string>
+    <string name="diag_table_no_btn_proceed">Proceed</string>
+    <string name="diag_table_no_field_required">required</string>
+    <string name="diag_table_no_field_hint">Your table No</string>
+
 </resources>

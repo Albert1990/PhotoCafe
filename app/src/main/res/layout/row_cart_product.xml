@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/shape_submit_button_bg"
+        android:text="+"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/etQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/btnPlus"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_light_yellow"
+        android:text="1"
+        app:fontId="1"/>
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/etQuantity"
+        android:background="@drawable/shape_submit_button_bg"
+        android:text="-"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_light_yellow"
+        app:fontId="1"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/btnMinus"
+        android:layout_toRightOf="@id/tvProduct"
+        android:gravity="center"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_light_yellow"
+        android:text=".........."
+        app:fontId="1"/>
+
+</RelativeLayout>

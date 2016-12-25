@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_light_yellow"
+        android:text="@string/diag_table_no_header"
+        app:fontId="1"/>
+
+    <com.brain_socket.photocafe.view.EditTextCustomFont
+        android:id="@+id/etTableNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_light_yellow"
+        android:hint="@string/diag_table_no_field_hint"
+        app:fontId="1"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="6dp"
+        android:background="@drawable/shape_submit_button_bg"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_white"
+        android:text="@string/diag_table_no_btn_proceed"
+        app:fontId="1"/>
+
+</LinearLayout>

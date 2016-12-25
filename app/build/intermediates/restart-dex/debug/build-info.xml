@@ -4,40 +4,39 @@
     api-level="23"
     density="560dpi"
     format="7"
-    timestamp="99059651611809"
+    timestamp="301348410662552"
     token="-283866633429592068" >
 
     <task
         name="javac"
-        duration="549" />
+        duration="1125" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="54" />
+        duration="14" />
     <task
         name="verifier"
-        duration="4" />
+        duration="2" />
 
     <artifact
-        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
         type="DEX" />
 
-    <build timestamp="98887191943573" >
+    <build timestamp="300633702313118" >
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="99059651611809" >
-        <artifact
-            location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
+    <build timestamp="301195193993074" >
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="301348410662552" >
+        <artifact
+            location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
             type="DEX" />
     </build>
 

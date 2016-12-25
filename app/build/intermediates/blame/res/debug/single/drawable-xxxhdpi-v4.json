@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_carousel.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/ic_carousel.png"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_scrubber_control_to_pressed_mtrl_005.png"
     },
@@ -12,32 +8,36 @@
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/decoration_cam.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/decoration_cam.png"
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_cart_products_count_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_cart_products_count_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_rounded_category_dark_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_rounded_category_dark_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/bg_artwork.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/bg_artwork.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/close_icon.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/close_icon.png"
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_btn_check_to_on_mtrl_000.png"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_ab_back_mtrl_am_alpha.png",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_ab_back_mtrl_am_alpha.png"
     },
     {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_menu_copy_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00001.9.png",
@@ -52,88 +52,8 @@
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_clear_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/cart_paper.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/cart_paper.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/btn_add.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/btn_add.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/minus_icon_01.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/minus_icon_01.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/tilable_doted_line.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/tilable_doted_line.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/tag_icon.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/tag_icon.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/side_logo.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/side_logo.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_list.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/ic_list.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/splash_icon.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/splash_icon.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_voice_search_api_mtrl_alpha.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_voice_search_api_mtrl_alpha.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/home_title_decoration.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/home_title_decoration.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_rounded_category_light_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_rounded_category_light_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/shape_cart_icon_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/shape_cart_icon_bg.xml"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_cut_mtrl_alpha.png",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/cart_icon.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/cart_icon.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/plus_icon.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/plus_icon.png"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png",
@@ -152,12 +72,8 @@
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_ic_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/minus_icon.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/minus_icon.png"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/lang_select_logo.png",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable-xxxhdpi/lang_select_logo.png"
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_switch_to_on_mtrl_00012.9.png",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable-xxxhdpi/abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",

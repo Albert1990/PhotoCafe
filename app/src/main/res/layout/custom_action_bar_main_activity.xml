@@ -1,83 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/brown_dark">
-
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="10dp"
-        android:src="@drawable/splash_icon"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/ivLogo"
-        android:orientation="horizontal">
-
-        <com.brain_socket.photocafe.view.TextViewCustomFont
-            android:id="@+id/btnEnglish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:textColor="@color/white"
-            android:textSize="@dimen/ts_text_small"
-            android:text="@string/activity_language_select_btn_english"
-            app:fontId="1"/>
-
-        <com.brain_socket.photocafe.view.TextViewCustomFont
-            android:id="@+id/btnArabic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="@dimen/ts_text_small"
-            android:text="@string/activity_language_select_btn_arabic"
-            app:fontId="1"/>
-
-    </LinearLayout>
-
-    <com.brain_socket.photocafe.view.TextViewCustomFont
-        android:id="@+id/tvCategory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="130dp"
-        android:textColor="@color/txt_light_yellow"
-        android:textSize="@dimen/ts_title_xxbig"
-        android:text="Drinks"
-        app:fontId="1"/>
-
-    <com.brain_socket.photocafe.view.TextViewCustomFont
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="55dp"
-        android:layout_marginLeft="130dp"
-        android:gravity="right"
-        android:textColor="@color/txt_light_yellow"
-        android:textSize="@dimen/ts_title_xxbig"
-        android:text="......................"
-        app:fontId="1"/>
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/ivCart"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="40dp"
-        android:background="@drawable/shape_cart_icon_bg"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
         android:padding="5dp"
+        android:background="@drawable/shape_cart_icon_bg"
         android:src="@drawable/cart_icon"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
@@ -85,8 +21,8 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@id/ivCart"
-        android:layout_marginRight="-12dp"
+        android:layout_toRightOf="@id/ivCart"
+        android:layout_marginLeft="-12dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/shape_cart_products_count_bg"
         android:gravity="center"
@@ -95,13 +31,49 @@
         android:text="0"
         app:fontId="1"/>
 
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/ts_title_big"
+        android:textColor="@color/txt_light_yellow"
+        android:text="Category"
+        app:fontId="1"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/btnEnglish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_white"
+        android:text="@string/activity_language_select_btn_english"
+        app:fontId="1"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/btnArabic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/ts_text_normal"
+        android:textColor="@color/txt_white"
+        android:text="@string/activity_language_select_btn_arabic"
+        app:fontId="1"/>
+
     <ImageView
-        android:id="@+id/ivViewType"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="7dp"
+        android:layout_toLeftOf="@id/btnEnglish"
         android:src="@drawable/ic_carousel"/>
 
 </RelativeLayout>

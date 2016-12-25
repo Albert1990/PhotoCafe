@@ -17,7 +17,6 @@
         android:layout_height="200dp"
         android:layout_gravity="center_horizontal|top"
         android:layout_marginTop="120dp"
-        android:layout_marginLeft="15dp"
         android:src="@drawable/splash_icon"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont

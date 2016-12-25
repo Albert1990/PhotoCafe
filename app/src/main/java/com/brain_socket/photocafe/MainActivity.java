@@ -3,6 +3,7 @@ package com.brain_socket.photocafe;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +31,8 @@ import com.brain_socket.photocafe.view.RoundedImageView;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DataStore.LanguageChangedListener{
     private RecyclerView rvProducts;
@@ -39,57 +43,107 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ArrayList<ProductModel> products;
     private ProductsRecycleViewAdapter productsAdapter;
     private CategoryAdapter categoriesAdapter;
-    private HashMap<String,CartProductModel> cartProducts;
+    private ArrayList<CartProductModel> cartProducts;
     private TextView tvCartProductsCount;
     private Dialog loadingDialog;
+    private TextView tvCategory;
+    private TextView tvNoProducts;
+    private View btnEnglish;
+    private View btnArabic;
+    private RecyclerView rvCartItems;
+    private CartProductsAdapter cartProductsAdapter;
+    private View rlCartContents;
+    private View tvCartEmpty;
+    private View cartContentSlider;
+    private DiagTableNo diagTableNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setCustomActionBar();
+        //setCustomActionBar();
         init();
         bindUserData();
     }
 
     private void init(){
-        rvProducts = (RecyclerView)findViewById(R.id.rvProducts);
-        vpCategories = (ViewPager)findViewById(R.id.vpCategories);
+        try {
+            rvProducts = (RecyclerView) findViewById(R.id.rvProducts);
+            vpCategories = (ViewPager) findViewById(R.id.vpCategories);
+            tvCartProductsCount = (TextView) findViewById(R.id.tvCartProductsCount);
+            View ivCart = findViewById(R.id.ivCart);
+            btnEnglish = findViewById(R.id.btnEnglish);
+            btnArabic = findViewById(R.id.btnArabic);
+            tvCategory = (TextView)findViewById(R.id.tvCategory);
+            tvNoProducts = (TextView)findViewById(R.id.tvNoProducts);
+            rvCartItems = (RecyclerView)findViewById(R.id.rvCartItems);
+            rlCartContents = findViewById(R.id.rlCartContents);
+            tvCartEmpty = findViewById(R.id.tvCartEmpty);
+            View tvReset = findViewById(R.id.tvReset);
+            View tvSubmit = findViewById(R.id.tvSubmit);
+            cartContentSlider = findViewById(R.id.cartContentSlider);
 
-        cartProducts = new HashMap<String,CartProductModel>();
-        loadingDialog = PhotoCafeApp.getNewLoadingDilaog(this);
+            cartProducts = new ArrayList<CartProductModel>();
+            loadingDialog = PhotoCafeApp.getNewLoadingDilaog(this);
+            tvNoProducts.setVisibility(View.GONE);
+            ivCart.setOnClickListener(this);
+            btnArabic.setOnClickListener(this);
+            btnEnglish.setOnClickListener(this);
+            tvReset.setOnClickListener(this);
+            tvSubmit.setOnClickListener(this);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
-    private void setCustomActionBar(){
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.custom_action_bar_main_activity);
-        View view = getSupportActionBar().getCustomView();
-        View btnArabic = view.findViewById(R.id.btnArabic);
-        View btnEnglish = view.findViewById(R.id.btnEnglish);
-        tvCartProductsCount = (TextView)view.findViewById(R.id.tvCartProductsCount);
-        View ivCart = view.findViewById(R.id.ivCart);
-
-        btnArabic.setOnClickListener(this);
-        btnEnglish.setOnClickListener(this);
-        ivCart.setOnTouchListener(new View.OnTouchListener() {
-            private static final int MAX_CLICK_DURATION = 200;
-            private long startClickTime;
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()) {
-                }
-                return true;
-            }
-        });
-    }
+//    private void setCustomActionBar(){
+//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//        getSupportActionBar().setDisplayShowCustomEnabled(true);
+//        getSupportActionBar().setCustomView(R.layout.custom_action_bar_main_activity);
+//        View view = getSupportActionBar().getCustomView();
+//        View btnLanguage = view.findViewById(R.id.btnLanguage);
+//        tvCartProductsCount = (TextView)view.findViewById(R.id.tvCartProductsCount);
+//        View ivCart = view.findViewById(R.id.ivCart);
+//
+//        btnLanguage.setOnClickListener(this);
+////        ivCart.setOnTouchListener(new View.OnTouchListener() {
+////            private static final int MAX_CLICK_DURATION = 200;
+////            private long startClickTime;
+////
+////            @Override
+////            public boolean onTouch(View v, MotionEvent event) {
+////                switch (event.getAction()) {
+////                }
+////                return true;
+////            }
+////        });
+//    }
 
     private void bindUserData(){
         try {
             DataStore.getInstance().addLanguageChangedListener(this);
+
+            PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
+            if(currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
+                btnEnglish.setVisibility(View.VISIBLE);
+                btnArabic.setVisibility(View.INVISIBLE);
+                tvNoProducts.setText(getString(R.string.activity_main_activity_no_products));
+            }
+            else {
+                btnEnglish.setVisibility(View.INVISIBLE);
+                btnArabic.setVisibility(View.VISIBLE);
+                tvNoProducts.setText(getString(R.string.activity_main_activity_no_products));
+            }
+
+            diagTableNo = new DiagTableNo(this,tableNoDiagCallBack);
+            rlCartContents.setVisibility(View.GONE);
+            tvCartEmpty.setVisibility(View.VISIBLE);
+            cartContentSlider.setVisibility(View.GONE);
+
             categories = DataStore.getInstance().getCategories();
             CategoryModel selectedCategory = CategoryModel.fromJsonString(getIntent().getStringExtra("selectedCategory"));
+            selectedCategoryIndex = findCategoryIndex(selectedCategory.getId());
+            tvCategory.setText(selectedCategory.getName());
 
             rvProducts.setLayoutManager(new GridLayoutManager(this, 1));
             productsAdapter = new ProductsRecycleViewAdapter(this);
@@ -98,68 +152,131 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             products = selectedCategory.getProducts();
             productsAdapter.updateAdapter();
-
-            vpCategories.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-                @Override
-                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-                }
-
-                @Override
-                public void onPageSelected(int position) {
-                    selectedCategoryIndex = position;
-                    CategoryModel selectedCategory = categories.get(position);
-                    categoriesAdapter.updateAdapter();
-                    products = selectedCategory.getProducts();
-                    productsAdapter.updateAdapter();
-                }
-
-                @Override
-                public void onPageScrollStateChanged(int state) {
-
-                }
-            });
+            handleProductsView();
 
             categoriesAdapter = new CategoryAdapter();
             vpCategories.setAdapter(categoriesAdapter);
             categoriesAdapter.updateAdapter();
 
+            rvCartItems.setLayoutManager(new GridLayoutManager(this, 1));
+            cartProductsAdapter = new CartProductsAdapter(this);
+            rvCartItems.setAdapter(cartProductsAdapter);
 
         }catch (Exception ex){
             ex.printStackTrace();
         }
     }
 
+    private DiagTableNo.TableNoDiagCallBack tableNoDiagCallBack = new DiagTableNo.TableNoDiagCallBack() {
+        @Override
+        public void onClose(String tableNo) {
+            diagTableNo.dismiss();
+            if(cartProducts.size() > 0){
+                loadingDialog.show();
+                DataStore.getInstance().attemptSubmitCart(cartProducts,tableNo,submitCartCallback);
+            }
+        }
+    };
+
+    private int getCartProductsCount(){
+        int cartProductsCount = 0;
+        CartProductModel cartProductModel = null;
+        for (CartProductModel m : cartProducts) {
+            cartProductsCount += m.getQuantity();
+        }
+        return cartProductsCount;
+    }
+
+    private int findCategoryIndex(String id){
+        int categoryIndex = 0;
+        for(int i=0;i<categories.size();i++){
+            if(categories.get(i).getId().equals(id)){
+                categoryIndex = i;
+                break;
+            }
+        }
+        return categoryIndex;
+    }
+
+    private void handleProductsView(){
+        if(products.size() > 0){
+            tvNoProducts.setVisibility(View.GONE);
+            rvProducts.setVisibility(View.VISIBLE);
+        }
+        else{
+            tvNoProducts.setVisibility(View.VISIBLE);
+            rvProducts.setVisibility(View.GONE);
+        }
+    }
+
     private void resetCart(){
         cartProducts.clear();
+        cartProductsAdapter.updateAdapter();
+        cartContentSlider.setVisibility(View.GONE);
+        tvCartProductsCount.setText("0");
     }
 
     private void submitCart(){
-        if(cartProducts.size() > 0){
-            loadingDialog.show();
-            DataStore.getInstance().attemptSubmitCart(cartProducts,submitCartCallback);
-        }
+        diagTableNo.show();
     }
 
     private DataStore.DataRequestCallback submitCartCallback = new DataStore.DataRequestCallback() {
         @Override
         public void onDataReady(ServerResult result, boolean success) {
-            loadingDialog.dismiss();
-            if(success){
-
+            try {
+                loadingDialog.dismiss();
+                if (success) {
+                    String msg = (String) result.getValue("msg");
+                    if (msg.equals("1")) {
+                        PhotoCafeApp.Toast(getString(R.string.activity_main_cart_contents_submit_success));
+                    } else {
+                        PhotoCafeApp.Toast(msg);
+                    }
+                }
+                cartContentSlider.setVisibility(View.GONE);
+            }catch (Exception ex){
+                ex.printStackTrace();
             }
         }
     };
+
+    private void toggleLanguage(){
+        try {
+            PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
+            if (currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
+                btnEnglish.setVisibility(View.INVISIBLE);
+                btnArabic.setVisibility(View.VISIBLE);
+                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.EN);
+            } else {
+                btnEnglish.setVisibility(View.VISIBLE);
+                btnArabic.setVisibility(View.INVISIBLE);
+                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.AR);
+            }
+            getIntent().putExtra("selectedCategory", categories.get(selectedCategoryIndex).getJsonString());
+            recreate();
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+    }
 
     @Override
     public void onClick(View v) {
         int viewId = v.getId();
         switch (viewId){
-            case R.id.btnArabic:
-                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.AR);
-                break;
             case R.id.btnEnglish:
-                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.EN);
+                toggleLanguage();
+                break;
+            case R.id.btnArabic:
+                toggleLanguage();
+                break;
+            case R.id.tvReset:
+                resetCart();
+                break;
+            case R.id.tvSubmit:
+                submitCart();
+                break;
+            case R.id.ivCart:
+                cartContentSlider.setVisibility(View.VISIBLE);
                 break;
         }
     }
@@ -171,6 +288,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         products = categories.get(selectedCategoryIndex).getProducts();
         productsAdapter.updateAdapter();
+
+        if(PhotoCafeApp.getCurrentLanguage() == PhotoCafeApp.SUPPORTED_LANGUAGE.AR)
+            tvNoProducts.setText(getString(R.string.activity_main_activity_no_products));
+        else
+            tvNoProducts.setText(getString(R.string.activity_main_activity_no_products));
     }
 
     private class ProductsRecycleViewAdapter extends RecyclerView.Adapter<ProductViewHolderItem> {
@@ -232,20 +354,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             if (products != null) {
                                 int selectedProductIndex = (int) v.getTag();
                                 ProductModel selectedProduct = products.get(selectedProductIndex);
-                                CartProductModel cartProduct = null;
-                                if(cartProducts.containsKey(selectedProduct.getId()))
+                                CartProductModel cartProduct = getProductFromCartProducts(selectedProduct.getId());
+                                if(cartProduct != null)
                                 {
-                                    cartProduct = cartProducts.get(selectedProduct.getId());
                                     cartProduct.setQuantity(cartProduct.getQuantity()+1);
                                     cartProduct.setTotalPrice(cartProduct.getQuantity() * Float.parseFloat(selectedProduct.getPrice()));
                                 }
                                 else {
-                                    cartProduct = new CartProductModel(selectedProduct.getId(),
+                                    cartProduct = new CartProductModel(selectedProduct.getId(),selectedProduct.getName(),
                                             1,
                                             Float.parseFloat(selectedProduct.getPrice()));
-                                    cartProducts.put(selectedProduct.getId(),cartProduct);
+                                    cartProducts.add(cartProduct);
                                 }
-                                tvCartProductsCount.setText(Integer.toString(cartProducts.size()));
+                                tvCartProductsCount.setText(Integer.toString(getCartProductsCount()));
+                                cartProductsAdapter.updateAdapter();
                             }
                         }catch (Exception ex){
                             ex.printStackTrace();
@@ -256,6 +378,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ex.printStackTrace();
             }
         }
+
+        private CartProductModel getProductFromCartProducts(String productId){
+            CartProductModel model = null;
+            for(int i=0;i<cartProducts.size();i++){
+                if(cartProducts.get(i).getId().equals(productId)){
+                    model = cartProducts.get(i);
+                    break;
+                }
+            }
+            return model;
+        }
+
 
         @Override
         public int getItemCount() {
@@ -307,10 +441,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             View v = null;
             try {
                 v = inflater.inflate(R.layout.item_category_view_pager, container, false);
-                ImageView ivCategory = (ImageView) v.findViewById(R.id.ivCategory);
+                RoundedImageView ivCategory = (RoundedImageView) v.findViewById(R.id.ivCategory);
                 TextView tvCategory = (TextView) v.findViewById(R.id.tvCategory);
                 v.setTag(position);
                 v.setOnClickListener(this);
+
+                if(selectedCategoryIndex == position)
+                    ivCategory.setBackgroundResource(R.drawable.shape_brown_light_button_badge);
+                else
+                    ivCategory.setBackgroundResource(R.drawable.shape_brown_dark_button_badge);
 
                 CategoryModel categoryModel = categories.get(position);
                 tvCategory.setText(categoryModel.getName());
@@ -331,7 +470,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         @Override
         public float getPageWidth(int position) {
-            return 0.222f;
+            return 0.333f;
         }
 
         @Override
@@ -345,13 +484,122 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         @Override
+        public int getItemPosition(Object object) {
+            return POSITION_NONE;
+        }
+
+        @Override
         public void onClick(View v) {
-//            int selectedBrandIndex = (Integer) v.getTag();
-//            //selectedBrandIndex--;
-//            selectedBrandIndex = selectedBrandIndex < 0 ? 0 : selectedBrandIndex;
-//            Intent i = new Intent(MainActivity.this,BrandDetailsActivity.class);
-//            i.putExtra("brand",brands.get(selectedBrandIndex).getJsonString());
-//            startActivity(i);
+            try {
+                selectedCategoryIndex = (int) v.getTag();
+                CategoryModel selectedCategory = categories.get(selectedCategoryIndex);
+                categoriesAdapter.updateAdapter();
+                tvCategory.setText(selectedCategory.getName());
+                products = selectedCategory.getProducts();
+                productsAdapter.updateAdapter();
+                handleProductsView();
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    private class CartProductsAdapter extends RecyclerView.Adapter<CartProductViewHolderItem> implements View.OnClickListener{
+        private LayoutInflater inflater;
+
+        View.OnClickListener onItemClickListner = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        };
+
+        public CartProductsAdapter(Context context) {
+            inflater = LayoutInflater.from(context);
+        }
+
+        public void updateAdapter() {
+            try {
+                if (cartProducts != null) {
+                    notifyDataSetChanged();
+                    if(cartProducts.size() > 0){
+                        rlCartContents.setVisibility(View.VISIBLE);
+                        tvCartEmpty.setVisibility(View.GONE);
+                    }
+                    else{
+                        rlCartContents.setVisibility(View.GONE);
+                        tvCartEmpty.setVisibility(View.VISIBLE);
+                    }
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        @Override
+        public CartProductViewHolderItem onCreateViewHolder(ViewGroup parent, int viewType) {
+            View root = inflater.inflate(R.layout.row_cart_product, parent, false);
+            CartProductViewHolderItem holder = new CartProductViewHolderItem(root);
+            return holder;
+        }
+
+        @Override
+        public void onBindViewHolder(CartProductViewHolderItem holder, int position) {
+            try {
+                final CartProductModel model = cartProducts.get(position);
+                holder.root.setTag(position);
+                holder.tvProduct.setText(model.getName());
+                holder.btnPlus.setTag(position);
+                holder.btnPlus.setOnClickListener(this);
+                holder.btnMinus.setTag(position);
+                holder.btnMinus.setOnClickListener(this);
+                holder.etQuantity.setText(Integer.toString(model.getQuantity()));
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        @Override
+        public int getItemCount() {
+            if (cartProducts == null)
+                return 0;
+            return cartProducts.size();
+        }
+
+        @Override
+        public void onClick(View v) {
+            try {
+                int viewId = v.getId();
+                if(viewId == R.id.btnPlus || viewId == R.id.btnMinus){
+                    int pos = (int)v.getTag();
+                    CartProductModel m = cartProducts.get(pos);
+                    if(viewId == R.id.btnPlus)  m.setQuantity(m.getQuantity() + 1);
+                    if(viewId == R.id.btnMinus && m.getQuantity() > 0) m.setQuantity(m.getQuantity() - 1);
+
+                    if(m.getQuantity() <= 0)
+                        cartProducts.remove(m);
+                }
+                cartProductsAdapter.updateAdapter();
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    private static class CartProductViewHolderItem extends RecyclerView.ViewHolder {
+        public View root;
+        public TextView tvProduct;
+        public TextView etQuantity;
+        public View btnPlus;
+        public View btnMinus;
+
+        public CartProductViewHolderItem(View v) {
+            super(v);
+            root = v;
+            tvProduct = (TextView) v.findViewById(R.id.tvProduct);
+            btnPlus = v.findViewById(R.id.btnPlus);
+            btnMinus = v.findViewById(R.id.btnMinus);
+            etQuantity = (TextView) v.findViewById(R.id.etQuantity);
         }
     }
 }

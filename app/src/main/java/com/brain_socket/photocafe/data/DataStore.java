@@ -230,17 +230,14 @@ public class DataStore {
         }).start();
     }
 
-    public void attemptSubmitCart(final HashMap<String,CartProductModel> cartProducts, final DataRequestCallback callback) {
+    public void attemptSubmitCart(final ArrayList<CartProductModel> cartProducts,final String tableNo, final DataRequestCallback callback) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 boolean success = true;
-                ServerResult result = serverHandler.submitCart();
+                ServerResult result = serverHandler.submitCart(cartProducts,tableNo);
                 if (result.connectionFailed()) {
                     success = false;
-                } else {
-                    if (result.isValid()) {
-                    }
                 }
                 invokeCallback(callback, success, result); // invoking the callback
             }

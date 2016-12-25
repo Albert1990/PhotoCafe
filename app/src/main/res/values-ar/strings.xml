@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PhotoCafe</string>
+
+    <!-- SplashScreenActivity -->
+    <string name="activity_splash_screen_copy_right">الحقوق محفوظة @ 2016</string>
+
+    <!-- LanguageSelectActivity -->
+    <string name="activity_language_select_title">اختر اللغة</string>
+    <string name="activity_language_select_btn_english">English</string>
+    <string name="activity_language_select_btn_arabic">العربية</string>
+
+    <!-- MainActivity -->
+    <string name="activity_main_activity_no_products">ليس هنالك أطعمة في هذا الصنف</string>
+    <string name="activity_name_cart_contents_order">الطلبات</string>
+    <string name="activity_name_cart_contents_reset_button">تصفير القائمة</string>
+    <string name="activity_name_cart_contents_submit_button">متابعة</string>
+    <string name="activity_main_cart_contents_empty">إن سلتك فارغة</string>
+    <string name="activity_main_cart_contents_submit_success">تم إرسال طلبك, شكرا لك</string>
+
+    <!-- Diag TableNo -->
+    <string name="diag_table_no_header">أدخل رقم طاولتك من فضلك</string>
+    <string name="diag_table_no_btn_proceed">متابعة</string>
+    <string name="diag_table_no_field_required">حقل مطلوب</string>
+    <string name="diag_table_no_field_hint">رقم طاولتك</string>
+
+</resources>

@@ -30,13 +30,18 @@ public class SelectCategoryActivity extends AppCompatActivity implements DataSto
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_category);
-        setCustomActionBar();
+        //setCustomActionBar();
         init();
         bindUserData();
     }
 
     void init(){
         rvCategories = (RecyclerView)findViewById(R.id.rvCategories);
+        View btnArabic = findViewById(R.id.btnArabic);
+        View btnEnglish  = findViewById(R.id.btnEnglish);
+
+        btnArabic.setOnClickListener(this);
+        btnEnglish.setOnClickListener(this);
     }
 
     void bindUserData(){
@@ -49,17 +54,17 @@ public class SelectCategoryActivity extends AppCompatActivity implements DataSto
         categoriesAdapter.updateAdapter();
     }
 
-    private void setCustomActionBar(){
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
-        getSupportActionBar().setCustomView(R.layout.custom_action_bar_select_category);
-        View view = getSupportActionBar().getCustomView();
-        View btnArabic = view.findViewById(R.id.btnArabic);
-        View btnEnglish = view.findViewById(R.id.btnEnglish);
-
-        btnArabic.setOnClickListener(this);
-        btnEnglish.setOnClickListener(this);
-    }
+//    private void setCustomActionBar(){
+//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//        getSupportActionBar().setDisplayShowCustomEnabled(true);
+//        getSupportActionBar().setCustomView(R.layout.custom_action_bar_select_category);
+//        View view = getSupportActionBar().getCustomView();
+//        View btnArabic = view.findViewById(R.id.btnArabic);
+//        View btnEnglish = view.findViewById(R.id.btnEnglish);
+//
+//        btnArabic.setOnClickListener(this);
+//        btnEnglish.setOnClickListener(this);
+//    }
 
     @Override
     public void onLanguageChanged() {

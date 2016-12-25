@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
+import com.brain_socket.photocafe.model.CartProductModel;
 import com.brain_socket.photocafe.model.CategoryModel;
 import com.brain_socket.photocafe.model.ProductModel;
 
@@ -79,21 +80,26 @@ public class ServerAccess {
         return result;
     }
 
-    public ServerResult submitCart() {
+    public ServerResult submitCart(ArrayList<CartProductModel> cartProducts,String tableNo) {
         ServerResult result = new ServerResult();
         try{
-            String url = BASE_SERVICE_URL+"/addOrder.php";
-            JSONObject jsonPairs = new JSONObject();
-            jsonPairs.put("TableNo",1);
-            //jsonPairs.put()
-            ApiRequestResult apiResult = httpRequest(url,jsonPairs,"get",null);
+            JSONObject jsonToSend = new JSONObject();
+            JSONArray cartProductsJsonArr = new JSONArray();
+            for(CartProductModel m : cartProducts)
+                cartProductsJsonArr.put(m.getJsonObject());
+            jsonToSend.put("TableNo",tableNo);
+            jsonToSend.put("Products",cartProductsJsonArr.toString());
+
+            String url = BASE_SERVICE_URL+"/addOrder.php?valuesString=" + jsonToSend.toString();
+
+            ApiRequestResult apiResult = httpRequest(url,null,"get",null);
             JSONObject jsonResponse = apiResult.getResponseJsonObject();
             if(jsonResponse != null){
                 result.addPair("msg",jsonResponse.getString("msg"));
             }
         }catch (Exception ex){
-            ex.printStackTrace();
             result.addPair("msg","error");
+            ex.printStackTrace();
         }
         return result;
     }

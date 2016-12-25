@@ -20,7 +20,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppThemeDark" >
-        <activity android:name="com.brain_socket.photocafe.MainActivity" />
+        <activity
+            android:name="com.brain_socket.photocafe.MainActivity"
+            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name="com.brain_socket.photocafe.SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar" >
@@ -33,7 +35,9 @@
         <activity
             android:name="com.brain_socket.photocafe.SelectLanguageActivity"
             android:theme="@style/AppThemeNoActionBar" />
-        <activity android:name="com.brain_socket.photocafe.SelectCategoryActivity" />
+        <activity
+            android:name="com.brain_socket.photocafe.SelectCategoryActivity"
+            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

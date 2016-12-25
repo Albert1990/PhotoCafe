@@ -1,23 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/brown_dark"
     tools:context="com.brain_socket.photocafe.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvProducts"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="7dp"
-        android:layout_gravity="top|center_horizontal"></android.support.v7.widget.RecyclerView>
+        android:orientation="vertical"
+        android:layout_gravity="top">
+
+        <include layout="@layout/custom_action_bar_main_activity"></include>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"></android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvNoProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginTop="150dp"
+        android:gravity="center"
+        android:textSize="@dimen/ts_text_big"
+        android:textColor="@color/txt_light_yellow"
+        android:text="@string/activity_main_activity_no_products"
+        app:fontId="1"/>
 
     <com.brain_socket.photocafe.view.CarousellViewPager
         android:id="@+id/vpCategories"
         android:layout_width="match_parent"
         android:layout_height="115dp"
         android:layout_gravity="bottom"
-        android:background="@color/brown_light"></com.brain_socket.photocafe.view.CarousellViewPager>
+        android:background="@color/categories_view_pager_background"></com.brain_socket.photocafe.view.CarousellViewPager>
+
+    <include layout="@layout/slide_drawer_cart_contents"
+        android:id="@+id/cartContentSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"></include>
 
 </FrameLayout>

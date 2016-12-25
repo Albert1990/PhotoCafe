@@ -19,6 +19,17 @@
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"‏مشاركة مع %s"</string>
     <string msgid="1603543279005712093" name="abc_toolbar_collapse_description">"تصغير"</string>
+    <string name="activity_language_select_btn_arabic">العربية</string>
+    <string name="activity_language_select_btn_english">English</string>
+    <string name="activity_language_select_title">اختر اللغة</string>
+    <string name="activity_main_activity_no_products">ليس هنالك أطعمة في هذا الصنف</string>
+    <string name="activity_main_cart_contents_empty">إن سلتك فارغة</string>
+    <string name="activity_main_cart_contents_submit_success">تم إرسال طلبك, شكرا لك</string>
+    <string name="activity_name_cart_contents_order">الطلبات</string>
+    <string name="activity_name_cart_contents_reset_button">تصفير القائمة</string>
+    <string name="activity_name_cart_contents_submit_button">متابعة</string>
+    <string name="activity_splash_screen_copy_right">الحقوق محفوظة @ 2016</string>
+    <string name="app_name">PhotoCafe</string>
     <string msgid="4770915072144378781" name="common_google_play_services_api_unavailable_text">"‏يتطلب <ns1:g id="APP_NAME">%1$s</ns1:g> خدمة أو أكثر من خدمات Google Play والتي لا تتوفر حاليًا. يُرجى الاتصال بمطوّر البرامج للحصول على المساعدة."</string>
     <string msgid="2050101795821476669" name="common_google_play_services_enable_button">"‏تمكين خدمات Google Play"</string>
     <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"‏لن يعمل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تمكين خدمات Google Play."</string>
@@ -50,5 +61,9 @@
     <string msgid="5201977337835724196" name="common_open_on_phone">"فتح على الهاتف"</string>
     <string msgid="3441753203274453993" name="common_signin_button_text">"تسجل الدخول"</string>
     <string msgid="669893613918351210" name="common_signin_button_text_long">"‏تسجيل الدخول عبر Google"</string>
+    <string name="diag_table_no_btn_proceed">متابعة</string>
+    <string name="diag_table_no_field_hint">رقم طاولتك</string>
+    <string name="diag_table_no_field_required">حقل مطلوب</string>
+    <string name="diag_table_no_header">أدخل رقم طاولتك من فضلك</string>
     <string msgid="2869576371154716097" name="status_bar_notification_info_overflow">"+999"</string>
 </resources>
