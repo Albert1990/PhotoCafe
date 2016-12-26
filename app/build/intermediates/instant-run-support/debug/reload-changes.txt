@@ -1,2 +1,0 @@
-CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/data/ServerAccess$override.class
-CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class

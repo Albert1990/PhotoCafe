@@ -68,12 +68,13 @@
         app:fontId="1"/>
 
     <ImageView
+        android:id="@+id/ivViewType"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="10dp"
         android:layout_marginRight="7dp"
         android:layout_toLeftOf="@id/btnEnglish"
-        android:src="@drawable/ic_carousel"/>
+        android:src="@drawable/ic_list"/>
 
 </RelativeLayout>

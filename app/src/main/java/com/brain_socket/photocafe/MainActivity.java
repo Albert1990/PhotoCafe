@@ -34,6 +34,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+enum ViewType {List,FullScreen}
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DataStore.LanguageChangedListener{
     private RecyclerView rvProducts;
     private ViewPager vpCategories;
@@ -56,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private View tvCartEmpty;
     private View cartContentSlider;
     private DiagTableNo diagTableNo;
+    private ViewPager vpProducts;
+    private ViewType currentViewType;
+    private ProductsFullScreenAdapter productsFullScreenAdapter;
+    ImageView ivViewType;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,6 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             View tvReset = findViewById(R.id.tvReset);
             View tvSubmit = findViewById(R.id.tvSubmit);
             cartContentSlider = findViewById(R.id.cartContentSlider);
+            vpProducts = (ViewPager)findViewById(R.id.vpProducts);
+            ivViewType = (ImageView) findViewById(R.id.ivViewType);
 
             cartProducts = new ArrayList<CartProductModel>();
             loadingDialog = PhotoCafeApp.getNewLoadingDilaog(this);
@@ -91,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnEnglish.setOnClickListener(this);
             tvReset.setOnClickListener(this);
             tvSubmit.setOnClickListener(this);
+            ivViewType.setOnClickListener(this);
         }catch (Exception ex){
             ex.printStackTrace();
         }
@@ -122,6 +131,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void bindUserData(){
         try {
             DataStore.getInstance().addLanguageChangedListener(this);
+            currentViewType = ViewType.List;
+            vpProducts.setVisibility(View.GONE);
 
             PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
             if(currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
@@ -161,6 +172,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             rvCartItems.setLayoutManager(new GridLayoutManager(this, 1));
             cartProductsAdapter = new CartProductsAdapter(this);
             rvCartItems.setAdapter(cartProductsAdapter);
+
+            productsFullScreenAdapter = new ProductsFullScreenAdapter();
+            vpProducts.setAdapter(productsFullScreenAdapter);
+            productsFullScreenAdapter.updateAdapter();
 
         }catch (Exception ex){
             ex.printStackTrace();
@@ -259,6 +274,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    private void changeViewType(){
+        if(currentViewType == ViewType.List){
+            currentViewType = ViewType.FullScreen;
+            ivViewType.setImageResource(R.drawable.ic_carousel);
+            rvProducts.setVisibility(View.GONE);
+            vpProducts.setVisibility(View.VISIBLE);
+
+        }else{
+            currentViewType = ViewType.List;
+            ivViewType.setImageResource(R.drawable.ic_list);
+            rvProducts.setVisibility(View.VISIBLE);
+            vpProducts.setVisibility(View.GONE);
+        }
+    }
+
     @Override
     public void onClick(View v) {
         int viewId = v.getId();
@@ -278,6 +308,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.ivCart:
                 cartContentSlider.setVisibility(View.VISIBLE);
                 break;
+            case R.id.ivViewType:
+                changeViewType();
+                break;
+        }
+    }
+
+    private CartProductModel getProductFromCartProducts(String productId){
+        CartProductModel model = null;
+        for(int i=0;i<cartProducts.size();i++){
+            if(cartProducts.get(i).getId().equals(productId)){
+                model = cartProducts.get(i);
+                break;
+            }
+        }
+        return model;
+    }
+
+    private void addProductToCart(int selectedProductIndex){
+        if (products != null) {
+            ProductModel selectedProduct = products.get(selectedProductIndex);
+            CartProductModel cartProduct = getProductFromCartProducts(selectedProduct.getId());
+            if(cartProduct != null)
+            {
+                cartProduct.setQuantity(cartProduct.getQuantity()+1);
+                cartProduct.setTotalPrice(cartProduct.getQuantity() * Float.parseFloat(selectedProduct.getPrice()));
+            }
+            else {
+                cartProduct = new CartProductModel(selectedProduct.getId(),selectedProduct.getName(),
+                        1,
+                        Float.parseFloat(selectedProduct.getPrice()));
+                cartProducts.add(cartProduct);
+            }
+            tvCartProductsCount.setText(Integer.toString(getCartProductsCount()));
+            cartProductsAdapter.updateAdapter();
         }
     }
 
@@ -351,24 +415,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onClick(View v) {
                         try {
-                            if (products != null) {
-                                int selectedProductIndex = (int) v.getTag();
-                                ProductModel selectedProduct = products.get(selectedProductIndex);
-                                CartProductModel cartProduct = getProductFromCartProducts(selectedProduct.getId());
-                                if(cartProduct != null)
-                                {
-                                    cartProduct.setQuantity(cartProduct.getQuantity()+1);
-                                    cartProduct.setTotalPrice(cartProduct.getQuantity() * Float.parseFloat(selectedProduct.getPrice()));
-                                }
-                                else {
-                                    cartProduct = new CartProductModel(selectedProduct.getId(),selectedProduct.getName(),
-                                            1,
-                                            Float.parseFloat(selectedProduct.getPrice()));
-                                    cartProducts.add(cartProduct);
-                                }
-                                tvCartProductsCount.setText(Integer.toString(getCartProductsCount()));
-                                cartProductsAdapter.updateAdapter();
-                            }
+                            int selectedProductIndex = (int)v.getTag();
+                            addProductToCart(selectedProductIndex);
                         }catch (Exception ex){
                             ex.printStackTrace();
                         }
@@ -378,18 +426,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ex.printStackTrace();
             }
         }
-
-        private CartProductModel getProductFromCartProducts(String productId){
-            CartProductModel model = null;
-            for(int i=0;i<cartProducts.size();i++){
-                if(cartProducts.get(i).getId().equals(productId)){
-                    model = cartProducts.get(i);
-                    break;
-                }
-            }
-            return model;
-        }
-
 
         @Override
         public int getItemCount() {
@@ -600,6 +636,82 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             btnPlus = v.findViewById(R.id.btnPlus);
             btnMinus = v.findViewById(R.id.btnMinus);
             etQuantity = (TextView) v.findViewById(R.id.etQuantity);
+        }
+    }
+
+    class ProductsFullScreenAdapter extends PagerAdapter implements View.OnClickListener {
+        private Context context;
+        private LayoutInflater inflater;
+
+        public ProductsFullScreenAdapter() {
+            this.context = PhotoCafeApp.getAppContext();
+            this.inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        }
+
+        public void updateAdapter() {
+            try {
+                if (categories != null)
+                    notifyDataSetChanged();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            View v = null;
+            try {
+                v = inflater.inflate(R.layout.item_product_full_screen, container, false);
+                ProductModel p = products.get(position);
+                ImageView ivProduct = (ImageView)v.findViewById(R.id.ivProduct);
+                TextView tvPrice = (TextView)v.findViewById(R.id.tvPrice);
+                TextView tvDescription = (TextView)v.findViewById(R.id.tvDescription);
+                View ivAdd = v.findViewById(R.id.ivAdd);
+                ivAdd.setTag(position);
+                ivAdd.setOnClickListener(this);
+
+                PhotoProvider.getInstance().displayPhotoNormal(p.getImage(), ivProduct);
+                tvPrice.setText(p.getPriceWithUnti());
+                tvDescription.setText(p.getDescription());
+                container.addView(v);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+            return v;
+        }
+
+        @Override
+        public int getCount() {
+            if (products == null)
+                return 0;
+            return products.size();
+        }
+
+        @Override
+        public boolean isViewFromObject(View view, Object object) {
+            return view == object;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object view) {
+            container.removeView((View) view);
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            return POSITION_NONE;
+        }
+
+        @Override
+        public void onClick(View v) {
+            try {
+                if(v.getId() == R.id.ivAdd){
+                    int selectedProductIndex = (int)v.getTag();
+                    addProductToCart(selectedProductIndex);
+                }
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
         }
     }
 }
