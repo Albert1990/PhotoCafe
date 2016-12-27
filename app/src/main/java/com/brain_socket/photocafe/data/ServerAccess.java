@@ -91,6 +91,7 @@ public class ServerAccess {
             jsonToSend.put("Products",cartProductsJsonArr.toString());
 
             String url = BASE_SERVICE_URL+"/addOrder.php?valuesString=" + jsonToSend.toString();
+            url = URLEncoder.encode(url,"UTF-8");
 
             ApiRequestResult apiResult = httpRequest(url,null,"get",null);
             JSONObject jsonResponse = apiResult.getResponseJsonObject();

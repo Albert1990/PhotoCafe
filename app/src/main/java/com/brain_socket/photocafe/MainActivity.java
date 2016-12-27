@@ -30,6 +30,7 @@ import com.brain_socket.photocafe.model.CategoryModel;
 import com.brain_socket.photocafe.model.OrderModel;
 import com.brain_socket.photocafe.model.ProductModel;
 import com.brain_socket.photocafe.view.RoundedImageView;
+import com.brain_socket.photocafe.view.TextViewCustomFont;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -269,6 +270,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void toggleLanguage(){
         try {
+            TextViewCustomFont.resetFonts();
             PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
             if (currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
                 btnEnglish.setVisibility(View.INVISIBLE);

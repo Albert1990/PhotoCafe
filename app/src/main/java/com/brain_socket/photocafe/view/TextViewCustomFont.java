@@ -101,6 +101,12 @@ public class TextViewCustomFont extends TextView
         return fontFaceBold;
     }
 
+    public static void resetFonts(){
+        fontFaceBold = null;
+        fontFaceRegular = null;
+        fontFaceXBold = null;
+    }
+
     public static Typeface getTFXBold(Context context){
         try {
             if(fontFaceXBold == null) {

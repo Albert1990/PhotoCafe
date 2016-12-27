@@ -14,12 +14,11 @@
 
     <com.brain_socket.photocafe.view.RoundedImageView
         android:id="@+id/ivCategory"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true"
         android:background="@drawable/shape_rounded_category_light_bg"
-        android:padding="20dp"
         android:src="@drawable/ic_carousel"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont

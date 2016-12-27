@@ -17,6 +17,7 @@ import com.brain_socket.photocafe.data.DataStore;
 import com.brain_socket.photocafe.data.PhotoProvider;
 import com.brain_socket.photocafe.model.CategoryModel;
 import com.brain_socket.photocafe.view.RoundedImageView;
+import com.brain_socket.photocafe.view.TextViewCustomFont;
 
 import java.util.ArrayList;
 
@@ -77,9 +78,11 @@ public class SelectCategoryActivity extends AppCompatActivity implements DataSto
         int viewId = v.getId();
         switch (viewId){
             case R.id.btnArabic:
+                TextViewCustomFont.resetFonts();
                 PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.AR);
                 break;
             case R.id.btnEnglish:
+                TextViewCustomFont.resetFonts();
                 PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.EN);
                 break;
         }
