@@ -6,11 +6,14 @@ import android.content.Intent;
 import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -61,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager vpProducts;
     private ViewType currentViewType;
     private ProductsFullScreenAdapter productsFullScreenAdapter;
+
     ImageView ivViewType;
 
     @Override
@@ -100,6 +104,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvReset.setOnClickListener(this);
             tvSubmit.setOnClickListener(this);
             ivViewType.setOnClickListener(this);
+
+
         }catch (Exception ex){
             ex.printStackTrace();
         }
@@ -147,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             diagTableNo = new DiagTableNo(this,tableNoDiagCallBack);
             rlCartContents.setVisibility(View.GONE);
             tvCartEmpty.setVisibility(View.VISIBLE);
-            cartContentSlider.setVisibility(View.GONE);
+            //cartContentSlider.setVisibility(View.GONE);
 
             categories = DataStore.getInstance().getCategories();
             CategoryModel selectedCategory = CategoryModel.fromJsonString(getIntent().getStringExtra("selectedCategory"));
@@ -232,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void resetCart(){
         cartProducts.clear();
         cartProductsAdapter.updateAdapter();
-        cartContentSlider.setVisibility(View.GONE);
+        //cartContentSlider.setVisibility(View.GONE);
         tvCartProductsCount.setText("0");
     }
 
@@ -253,7 +259,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         PhotoCafeApp.Toast(msg);
                     }
                 }
-                cartContentSlider.setVisibility(View.GONE);
+                //cartContentSlider.setVisibility(View.GONE);
             }catch (Exception ex){
                 ex.printStackTrace();
             }
@@ -311,7 +317,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 submitCart();
                 break;
             case R.id.ivCart:
-                cartContentSlider.setVisibility(View.VISIBLE);
+                //cartContentSlider.setVisibility(View.VISIBLE);
                 break;
             case R.id.ivViewType:
                 changeViewType();

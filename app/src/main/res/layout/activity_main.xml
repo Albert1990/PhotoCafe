@@ -1,56 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    android:id="@+id/sliding_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brown_dark"
-    tools:context="com.brain_socket.photocafe.MainActivity">
+    android:gravity="top"
+    sothree:umanoPanelHeight="20dp"
+    sothree:umanoShadowHeight="0dp">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="top">
+        android:layout_height="match_parent"
+        android:background="@color/brown_dark">
 
-        <include layout="@layout/custom_action_bar_main_activity"></include>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvProducts"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="7dp"></android.support.v7.widget.RecyclerView>
+            android:layout_gravity="top"
+            android:orientation="vertical">
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/vpProducts"
+            <include layout="@layout/custom_action_bar_main_activity"></include>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="7dp"></android.support.v7.widget.RecyclerView>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+        <com.brain_socket.photocafe.view.TextViewCustomFont
+            android:id="@+id/tvNoProducts"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="150dp"
+            android:gravity="center"
+            android:text="@string/activity_main_activity_no_products"
+            android:textColor="@color/txt_light_yellow"
+            android:textSize="@dimen/ts_text_big"
+            app:fontId="1"/>
 
-    </LinearLayout>
+        <com.brain_socket.photocafe.view.CarousellViewPager
+            android:id="@+id/vpCategories"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_gravity="bottom"
+            android:background="@color/categories_view_pager_background"></com.brain_socket.photocafe.view.CarousellViewPager>
 
-    <com.brain_socket.photocafe.view.TextViewCustomFont
-        android:id="@+id/tvNoProducts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:layout_marginTop="150dp"
-        android:gravity="center"
-        android:textSize="@dimen/ts_text_big"
-        android:textColor="@color/txt_light_yellow"
-        android:text="@string/activity_main_activity_no_products"
-        app:fontId="1"/>
+    </FrameLayout>
 
-    <com.brain_socket.photocafe.view.CarousellViewPager
-        android:id="@+id/vpCategories"
-        android:layout_width="match_parent"
-        android:layout_height="115dp"
-        android:layout_gravity="bottom"
-        android:background="@color/categories_view_pager_background"></com.brain_socket.photocafe.view.CarousellViewPager>
-
-    <include layout="@layout/slide_drawer_cart_contents"
+    <include
         android:id="@+id/cartContentSlider"
+        layout="@layout/slide_drawer_cart_contents"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
         android:layout_gravity="top"></include>
-
-</FrameLayout>
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

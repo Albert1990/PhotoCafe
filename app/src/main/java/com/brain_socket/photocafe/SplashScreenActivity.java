@@ -20,7 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         DataStore.getInstance().requestCategories(new DataStore.DataRequestCallback() {
             @Override
             public void onDataReady(ServerResult result, boolean success) {
-                if(success){
+                if(success || (DataStore.getInstance().getCategories() != null && !DataStore.getInstance().getCategories().isEmpty())){
                     Intent i = new Intent(SplashScreenActivity.this,SelectLanguageActivity.class);
                     startActivity(i);
                 }
