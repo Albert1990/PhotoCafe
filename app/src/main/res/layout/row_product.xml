@@ -30,16 +30,18 @@
         android:layout_marginTop="40dp"
         android:src="@drawable/btn_add"/>
 
-    <com.brain_socket.photocafe.view.RoundedImageView
+    <com.brain_socket.photocafe.view.FullWidthImageView
         android:id="@+id/ivProduct"
         android:layout_width="85dp"
         android:layout_height="85dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:adjustViewBounds="true"
         android:padding="10dp"
-        android:src="@drawable/splash_icon" />
+        android:scaleType="fitXY"
+        android:src="@drawable/splash_icon"
+        app:corner_radius="5dp"/>
+
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/tvProduct"

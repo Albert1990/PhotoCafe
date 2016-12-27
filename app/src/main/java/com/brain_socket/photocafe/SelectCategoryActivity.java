@@ -155,7 +155,7 @@ public class SelectCategoryActivity extends AppCompatActivity implements DataSto
         public CategoryViewHolderItem(View v) {
             super(v);
             root = v;
-            ivCategory = (RoundedImageView) v.findViewById(R.id.ivCategory);
+            ivCategory = (ImageView) v.findViewById(R.id.ivCategory);
             tvCategory = (TextView) v.findViewById(R.id.tvCategory);
         }
     }

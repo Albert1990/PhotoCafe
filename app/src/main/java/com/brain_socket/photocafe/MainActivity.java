@@ -457,7 +457,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public ProductViewHolderItem(View v) {
             super(v);
             root = v;
-            ivProduct = (RoundedImageView) v.findViewById(R.id.ivProduct);
+            ivProduct = (ImageView) v.findViewById(R.id.ivProduct);
             tvProduct = (TextView) v.findViewById(R.id.tvProduct);
             tvDescription = (TextView) v.findViewById(R.id.tvDescription);
             tvPrice = (TextView) v.findViewById(R.id.tvPrice);
@@ -488,7 +488,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             View v = null;
             try {
                 v = inflater.inflate(R.layout.item_category_view_pager, container, false);
-                RoundedImageView ivCategory = (RoundedImageView) v.findViewById(R.id.ivCategory);
+                ImageView ivCategory = (ImageView) v.findViewById(R.id.ivCategory);
                 TextView tvCategory = (TextView) v.findViewById(R.id.tvCategory);
                 v.setTag(position);
                 v.setOnClickListener(this);

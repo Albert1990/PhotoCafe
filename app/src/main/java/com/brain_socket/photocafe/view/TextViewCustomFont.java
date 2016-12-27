@@ -6,6 +6,8 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+import com.brain_socket.photocafe.PhotoCafeApp;
+import com.brain_socket.photocafe.PhotoCafeApp.SUPPORTED_LANGUAGE;
 import com.brain_socket.photocafe.R;
 
 /**
@@ -27,6 +29,7 @@ public class TextViewCustomFont extends TextView
     // fonts
     private static Typeface fontFaceRegular = null;
     private static Typeface fontFaceBold = null;
+    private static Typeface fontFaceXBold = null;
 
     public TextViewCustomFont(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -37,8 +40,7 @@ public class TextViewCustomFont extends TextView
         init(attrs);
     }
 
-    private void init(AttributeSet attrs)
-    {
+    private void init(AttributeSet attrs){
         try {
             if(!isInEditMode()) {
                 // get the typed array for the custom attrs
@@ -53,7 +55,11 @@ public class TextViewCustomFont extends TextView
                     case 2:
                         this.setTypeface(getTFBold(getContext()));
                         break;
+                    case 3:
+                        this.setTypeface(getTFXBold(getContext()));
+                        break;
                     default:
+                        this.setTypeface(getTFRegular(getContext()));
                         break;
                 }
 
@@ -64,34 +70,48 @@ public class TextViewCustomFont extends TextView
         catch (Exception ignored) {}
     }
 
-    public static Typeface getTFRegular(Context context)
-    {
+    public static Typeface getTFRegular(Context context){
         try {
             if(fontFaceRegular == null) {
-                fontFaceRegular = Typeface.createFromAsset(context.getAssets(), "fonts/Antipasto_extralight.otf");
+                String path = "fonts/Antipasto_extralight.otf";
+                if(PhotoCafeApp.getCurrentLanguage() == SUPPORTED_LANGUAGE.AR)
+                    path = "fonts/DroidKufiRegular.ttf";
+                fontFaceRegular = Typeface.createFromAsset(context.getAssets(), path);
             }
-        }
-        catch (Exception e) {
+        }catch (Exception e) {
             fontFaceRegular = Typeface.DEFAULT;
         }
         return fontFaceRegular;
     }
 
-
     /**
-     * Returns SC Duabi typeface used in the app
-     * @return
+     * @return Returns bold typeface used in the app based on the current active lang
      */
-    public static Typeface getTFBold(Context context)
-    {
+    public static Typeface getTFBold(Context context){
         try {
             if(fontFaceBold == null) {
-                fontFaceBold = Typeface.createFromAsset(context.getAssets(), "fonts/Antipasto_regular.otf");
+                String path = "fonts/Antipasto_regular.otf";
+                if(PhotoCafeApp.getCurrentLanguage() == SUPPORTED_LANGUAGE.AR)
+                    path = "fonts/DroidKufiRegular.ttf";
+                fontFaceBold = Typeface.createFromAsset(context.getAssets(), path);
             }
-        }
-        catch (Exception e) {
+        }catch (Exception e) {
             fontFaceBold = Typeface.DEFAULT;
         }
         return fontFaceBold;
+    }
+
+    public static Typeface getTFXBold(Context context){
+        try {
+            if(fontFaceXBold == null) {
+                String path = "fonts/Antipasto_extrabold.otf";
+                if(PhotoCafeApp.getCurrentLanguage() == SUPPORTED_LANGUAGE.AR)
+                    path = "fonts/DroidKufiRegular.ttf";
+                fontFaceXBold = Typeface.createFromAsset(context.getAssets(), path);
+            }
+        }catch (Exception e) {
+            fontFaceXBold = Typeface.DEFAULT;
+        }
+        return fontFaceXBold;
     }
 }
