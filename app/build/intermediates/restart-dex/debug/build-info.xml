@@ -4,7 +4,7 @@
     api-level="16"
     density="hdpi"
     format="7"
-    timestamp="323282903176584"
+    timestamp="334819562150319"
     token="-283866633429592068" >
 
     <task
@@ -24,7 +24,7 @@
         location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="323282903176584" >
+    <build timestamp="334819562150319" >
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />

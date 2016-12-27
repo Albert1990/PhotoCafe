@@ -39,7 +39,7 @@
         android:textSize="@dimen/ts_text_normal"
         android:textColor="@color/txt_white"
         android:text="@string/activity_language_select_title"
-        app:fontId="1"/>
+        app:fontId="2"/>
 
     <LinearLayout
         android:id="@+id/llLanguageButtons"

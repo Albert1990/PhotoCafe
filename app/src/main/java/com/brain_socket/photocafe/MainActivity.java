@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             cartContentSlider = findViewById(R.id.cartContentSlider);
             vpProducts = (ViewPager)findViewById(R.id.vpProducts);
             ivViewType = (ImageView) findViewById(R.id.ivViewType);
+            View ivClose = findViewById(R.id.ivClose);
 
             cartProducts = new ArrayList<CartProductModel>();
             loadingDialog = PhotoCafeApp.getNewLoadingDilaog(this);
@@ -104,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvReset.setOnClickListener(this);
             tvSubmit.setOnClickListener(this);
             ivViewType.setOnClickListener(this);
-
+            ivClose.setOnClickListener(this);
 
         }catch (Exception ex){
             ex.printStackTrace();
@@ -321,6 +322,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.ivViewType:
                 changeViewType();
+                break;
+            case R.id.ivClose:
+
                 break;
         }
     }

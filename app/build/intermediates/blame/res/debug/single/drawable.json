@@ -1,39 +1,15 @@
 [
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_text_cursor_material.xml"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_icon_light.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_plus_signin_btn_icon_light.xml"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_transparent.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_transparent.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_google_signin_btn_text_dark.xml"
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/below_shadow.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.sothree.slidinguppanel/library/3.3.1/res/drawable/below_shadow.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_colored_material.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_textfield_search_material.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_rounded_category_light_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_rounded_category_light_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_rounded_category_dark_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_rounded_category_dark_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
@@ -46,6 +22,86 @@
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_brown_dark_button_badge.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_brown_dark_button_badge.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_plus_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_brown_light_button_badge.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_brown_light_button_badge.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/above_shadow.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.sothree.slidinguppanel/library/3.3.1/res/drawable/above_shadow.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_cart_products_count_bg.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_cart_products_count_bg.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_product_quantity_bg.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_product_quantity_bg.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_plus_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_submit_button_bg.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_submit_button_bg.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_transparent.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_transparent.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_dark.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_rounded_category_light_bg.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_rounded_category_light_bg.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
@@ -66,10 +122,6 @@
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_cart_icon_bg.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_cart_icon_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_borderless_material.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
@@ -96,14 +148,6 @@
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_dark.xml"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_brown_dark_button_badge.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_brown_dark_button_badge.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_light.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_plus_signin_btn_text_light.xml"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_rounded_loading_bg.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_rounded_loading_bg.xml"
     },
@@ -116,32 +160,12 @@
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_default_mtrl_shape.xml"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_light.xml"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_brown_light_button_badge.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_brown_light_button_badge.xml"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_internal_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_switch_thumb_material.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_cart_products_count_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_cart_products_count_bg.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_light.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_google_signin_btn_icon_light.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
@@ -152,20 +176,8 @@
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_seekbar_thumb_material.xml"
     },
     {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_cab_background_top_material.xml"
-    },
-    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_dialog_material_background_dark.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_plus_signin_btn_text_dark.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_plus_signin_btn_text_dark.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/shape_submit_button_bg.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/drawable/shape_submit_button_bg.xml"
     },
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
@@ -178,9 +190,5 @@
     {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/res/drawable/common_google_signin_btn_text_light.xml"
-    },
-    {
-        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
-        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_tab_indicator_material.xml"
     }
 ]

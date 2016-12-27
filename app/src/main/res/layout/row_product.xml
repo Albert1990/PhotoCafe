@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp">
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/tvPrice"
@@ -17,7 +18,7 @@
         android:textColor="@color/txt_light_yellow"
         android:textSize="@dimen/ts_text_normal"
         android:text="50 AED"
-        app:fontId="2"/>
+        app:fontId="3"/>
 
     <ImageView
         android:id="@+id/btnAdd"
@@ -54,7 +55,7 @@
         android:textColor="@color/txt_light_yellow"
         android:textSize="@dimen/ts_text_normal"
         android:text="Mocha"
-        app:fontId="1"/>
+        app:fontId="3"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/tvDescription"

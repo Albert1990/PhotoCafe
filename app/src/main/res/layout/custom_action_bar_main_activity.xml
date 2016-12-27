@@ -39,7 +39,7 @@
         android:textSize="@dimen/ts_title_big"
         android:textColor="@color/txt_light_yellow"
         android:text="Category"
-        app:fontId="1"/>
+        app:fontId="3"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/btnEnglish"

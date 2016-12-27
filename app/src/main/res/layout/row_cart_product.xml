@@ -18,16 +18,18 @@
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/etQuantity"
-        android:layout_width="wrap_content"
+        android:layout_width="40dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@id/btnPlus"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
+        android:gravity="center"
+        android:background="@drawable/shape_product_quantity_bg"
         android:textSize="@dimen/ts_text_normal"
         android:textColor="@color/txt_light_yellow"
         android:text="1"
-        app:fontId="1"/>
+        app:fontId="3"/>
 
     <Button
         android:id="@+id/btnMinus"
@@ -47,18 +49,16 @@
         android:layout_alignParentTop="true"
         android:textSize="@dimen/ts_text_normal"
         android:textColor="@color/txt_light_yellow"
-        app:fontId="1"/>
+        app:fontId="3"/>
 
-    <com.brain_socket.photocafe.view.TextViewCustomFont
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+    <View
+        android:layout_width="30dp"
+        android:layout_height="10dp"
         android:layout_toLeftOf="@id/btnMinus"
         android:layout_toRightOf="@id/tvProduct"
-        android:gravity="center"
-        android:textSize="@dimen/ts_text_normal"
-        android:textColor="@color/txt_light_yellow"
-        android:text=".........."
-        app:fontId="1"/>
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dots"></View>
 
 </RelativeLayout>

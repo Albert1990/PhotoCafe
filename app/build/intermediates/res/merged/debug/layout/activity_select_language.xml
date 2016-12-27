@@ -9,6 +9,15 @@
     tools:context="com.brain_socket.photocafe.SelectLanguageActivity">
 
     <ImageView
+        android:layout_width="400dp"
+        android:layout_height="320dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-170dp"
+        android:layout_marginRight="-55dp"
+        android:src="@drawable/bg_artwork"/>
+
+    <ImageView
         android:id="@+id/ivLogo"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -30,7 +39,7 @@
         android:textSize="@dimen/ts_text_normal"
         android:textColor="@color/txt_white"
         android:text="@string/activity_language_select_title"
-        app:fontId="1"/>
+        app:fontId="2"/>
 
     <LinearLayout
         android:id="@+id/llLanguageButtons"
@@ -56,14 +65,6 @@
             android:text="@string/activity_language_select_btn_arabic"/>
     </LinearLayout>
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="-150dp"
-            android:layout_marginRight="-180dp"
-            android:src="@drawable/bg_artwork"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:layout_width="match_parent"
