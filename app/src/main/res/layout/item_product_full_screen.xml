@@ -8,26 +8,21 @@
         android:id="@+id/ivProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scaleType="fitXY"
         android:src="@drawable/home_title_decoration"/>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/rlContent"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:padding="10dp"
-        android:background="@color/black">
-
-        <com.brain_socket.photocafe.view.TextViewCustomFont
-            android:id="@+id/tvProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:textSize="@dimen/ts_text_normal"
-            android:textColor="@color/txt_light_yellow"
-            app:fontId="1"/>
+        android:layout_marginBottom="180dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/shape_product_full_screen_bg">
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvPrice"
@@ -36,24 +31,47 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
             android:textSize="@dimen/ts_text_normal"
+            android:textStyle="bold"
             android:textColor="@color/txt_light_yellow"
             app:fontId="1"/>
+
+        <com.brain_socket.photocafe.view.TextViewCustomFont
+            android:id="@+id/tvProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/tvPrice"
+            android:textSize="@dimen/ts_text_big"
+            android:textStyle="bold"
+            android:textColor="@color/txt_light_yellow"
+            app:fontId="1"/>
+
+        <View
+            android:id="@+id/ivDots"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@id/tvProduct"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/dots"></View>
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_below="@id/tvProduct"
+            android:layout_below="@id/ivDots"
             android:layout_marginTop="15dp"
             android:textSize="@dimen/ts_text_small"
             android:textColor="@color/txt_white"
+            android:maxLines="4"
             app:fontId="1"/>
 
         <ImageView
             android:id="@+id/ivAdd"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:layout_marginTop="10dp"
             android:layout_alignParentLeft="true"
             android:layout_below="@id/tvDescription"
             android:src="@drawable/btn_add"/>
@@ -61,10 +79,11 @@
     </RelativeLayout>
 
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="bottom|right"
-        android:layout_margin="15dp"
+        android:layout_marginBottom="130dp"
+        android:layout_marginRight="10dp"
         android:src="@drawable/decoration_cam"/>
 
 </FrameLayout>

@@ -22,5 +22,6 @@
 
     <color name="brown_dark">#49413b</color>
     <color name="brown_light">#b69464</color>
+    <color name="brown_dark_transparent">#cc49413b</color>
 
 </resources>

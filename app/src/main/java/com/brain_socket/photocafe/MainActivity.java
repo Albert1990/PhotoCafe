@@ -138,12 +138,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if(currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
                 btnEnglish.setVisibility(View.VISIBLE);
                 btnArabic.setVisibility(View.INVISIBLE);
-                tvNoProducts.setText(getString(R.string.activity_main_activity_no_products));
             }
             else {
                 btnEnglish.setVisibility(View.INVISIBLE);
                 btnArabic.setVisibility(View.VISIBLE);
-                tvNoProducts.setText(getString(R.string.activity_main_activity_no_products));
             }
 
             diagTableNo = new DiagTableNo(this,tableNoDiagCallBack);
@@ -216,10 +214,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void handleProductsView(){
         if(products.size() > 0){
             tvNoProducts.setVisibility(View.GONE);
-            rvProducts.setVisibility(View.VISIBLE);
+            if(currentViewType == ViewType.FullScreen){
+                vpProducts.setVisibility(View.VISIBLE);
+                rvProducts.setVisibility(View.GONE);
+            }else{
+                vpProducts.setVisibility(View.GONE);
+                rvProducts.setVisibility(View.VISIBLE);
+            }
         }
         else{
             tvNoProducts.setVisibility(View.VISIBLE);
+            vpProducts.setVisibility(View.GONE);
             rvProducts.setVisibility(View.GONE);
         }
     }
@@ -277,13 +282,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void changeViewType(){
         if(currentViewType == ViewType.List){
             currentViewType = ViewType.FullScreen;
-            ivViewType.setImageResource(R.drawable.ic_carousel);
+            ivViewType.setImageResource(R.drawable.ic_list);
             rvProducts.setVisibility(View.GONE);
             vpProducts.setVisibility(View.VISIBLE);
 
         }else{
             currentViewType = ViewType.List;
-            ivViewType.setImageResource(R.drawable.ic_list);
+            ivViewType.setImageResource(R.drawable.ic_carousel);
             rvProducts.setVisibility(View.VISIBLE);
             vpProducts.setVisibility(View.GONE);
         }
@@ -533,6 +538,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tvCategory.setText(selectedCategory.getName());
                 products = selectedCategory.getProducts();
                 productsAdapter.updateAdapter();
+                productsFullScreenAdapter.updateAdapter();
                 handleProductsView();
             }catch (Exception ex){
                 ex.printStackTrace();
@@ -664,6 +670,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 v = inflater.inflate(R.layout.item_product_full_screen, container, false);
                 ProductModel p = products.get(position);
                 ImageView ivProduct = (ImageView)v.findViewById(R.id.ivProduct);
+                TextView tvProduct = (TextView)v.findViewById(R.id.tvProduct);
                 TextView tvPrice = (TextView)v.findViewById(R.id.tvPrice);
                 TextView tvDescription = (TextView)v.findViewById(R.id.tvDescription);
                 View ivAdd = v.findViewById(R.id.ivAdd);
@@ -671,6 +678,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ivAdd.setOnClickListener(this);
 
                 PhotoProvider.getInstance().displayPhotoNormal(p.getImage(), ivProduct);
+                tvProduct.setText(p.getName());
                 tvPrice.setText(p.getPriceWithUnti());
                 tvDescription.setText(p.getDescription());
                 container.addView(v);
