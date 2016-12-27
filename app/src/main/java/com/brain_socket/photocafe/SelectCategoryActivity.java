@@ -73,17 +73,21 @@ public class SelectCategoryActivity extends AppCompatActivity implements DataSto
         categoriesAdapter.updateAdapter();
     }
 
+    private void changeLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE lang){
+        TextViewCustomFont.resetFonts();
+        PhotoCafeApp.setLanguage(lang);
+        recreate();
+    }
+
     @Override
     public void onClick(View v) {
         int viewId = v.getId();
         switch (viewId){
             case R.id.btnArabic:
-                TextViewCustomFont.resetFonts();
-                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.AR);
+                changeLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.AR);
                 break;
             case R.id.btnEnglish:
-                TextViewCustomFont.resetFonts();
-                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.EN);
+                changeLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.EN);
                 break;
         }
     }
