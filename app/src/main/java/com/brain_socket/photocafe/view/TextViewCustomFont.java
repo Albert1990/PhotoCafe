@@ -68,7 +68,7 @@ public class TextViewCustomFont extends TextView
     {
         try {
             if(fontFaceRegular == null) {
-                fontFaceRegular = Typeface.createFromAsset(context.getAssets(), "fonts/DroidKufi-Regular.ttf");
+                fontFaceRegular = Typeface.createFromAsset(context.getAssets(), "fonts/Antipasto_extralight.otf");
             }
         }
         catch (Exception e) {
@@ -86,7 +86,7 @@ public class TextViewCustomFont extends TextView
     {
         try {
             if(fontFaceBold == null) {
-                fontFaceBold = Typeface.createFromAsset(context.getAssets(), "fonts/DroidKufi-Bold.ttf");
+                fontFaceBold = Typeface.createFromAsset(context.getAssets(), "fonts/Antipasto_regular.otf");
             }
         }
         catch (Exception e) {

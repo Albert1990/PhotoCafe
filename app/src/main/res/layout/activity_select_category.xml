@@ -7,6 +7,14 @@
     android:background="@color/brown_dark"
     tools:context=".SelectCategoryActivity">
 
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="320dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="-170dp"
+        android:layout_marginRight="-55dp"
+        android:src="@drawable/bg_artwork"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,12 +31,5 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginBottom="-150dp"
-        android:layout_marginRight="-30dp"
-        android:src="@drawable/bg_artwork"/>
 
 </FrameLayout>
