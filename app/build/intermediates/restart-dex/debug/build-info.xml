@@ -2,32 +2,37 @@
 <instant-run
     abi="x86"
     api-level="16"
-    density="hdpi"
+    density="tvdpi"
     format="7"
-    timestamp="337323176969106"
+    timestamp="18007366268383"
     token="-283866633429592068" >
 
     <task
         name="javac"
-        duration="740" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="87" />
+        duration="0" />
     <task
         name="verifier"
-        duration="9" />
+        duration="0" />
 
     <artifact
-        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="337323176969106" >
+    <build timestamp="17979012583602" >
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="18007366268383" >
+        <artifact
+            location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout
+    android:id="@+id/sliding_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    sothree:umanoDragView="@+id/vCartHandle"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="80dp"
+    sothree:umanoShadowHeight="0dp">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/brown_dark">
+
+        <RelativeLayout
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|top"
+            android:background="@drawable/cardboard_surface">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/side_logo"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvCategories"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/ivLogo"></android.support.v7.widget.RecyclerView>
+
+            <com.brain_socket.photocafe.view.TextViewCustomFont
+                android:id="@+id/lblCopyRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/ts_text_normal"
+                android:textColor="@color/txt_white"
+                android:text="@string/activity_splash_screen_copy_right"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:fontId="1"/>
+
+            <LinearLayout
+                android:id="@+id/llLanguageButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_above="@id/lblCopyRight"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp">
+                <com.brain_socket.photocafe.view.TextViewCustomFont
+                    android:id="@+id/btnEnglish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shape_brown_dark_button_badge"
+                    android:gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:textSize="@dimen/ts_text_normal"
+                    android:textColor="@color/txt_white"
+                    android:text="@string/activity_language_select_btn_english"
+                    app:fontId="2"/>
+
+                <com.brain_socket.photocafe.view.TextViewCustomFont
+                    android:id="@+id/btnArabic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shape_brown_dark_button_badge"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:textSize="@dimen/ts_text_normal"
+                    android:textColor="@color/txt_white"
+                    android:text="@string/activity_language_select_btn_arabic"
+                    app:fontId="2"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="160dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/custom_action_bar_main_activity"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:paddingTop="22dp"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpProducts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+        <com.brain_socket.photocafe.view.TextViewCustomFont
+            android:id="@+id/tvNoProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="150dp"
+            android:gravity="center"
+            android:text="@string/activity_main_activity_no_products"
+            android:textColor="@color/txt_light_yellow"
+            android:textSize="@dimen/ts_text_big"
+            app:fontId="1"/>
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/cartContentSlider"
+        layout="@layout/slide_drawer_cart_contents"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="top"
+        android:background="@android:color/transparent"
+        />
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

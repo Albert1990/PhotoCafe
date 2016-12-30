@@ -26,4 +26,7 @@
     <string name="diag_table_no_field_required">required</string>
     <string name="diag_table_no_field_hint">Your table No</string>
 
+    <!-- SelectCategoryActivity -->
+    <string name="activity_select_category_title">What would you like to have?</string>
+
 </resources>

@@ -62,12 +62,11 @@
             android:alpha="0.6"
             android:background="@drawable/cardboard_surface"/>
 
-        <com.brain_socket.photocafe.view.CarousellViewPager
-            android:id="@+id/vpCategories"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvCategories"
             android:layout_width="match_parent"
             android:layout_height="115dp"
-            android:layout_gravity="bottom"
-            />
+            android:layout_gravity="bottom"></android.support.v7.widget.RecyclerView>
 
     </FrameLayout>
 

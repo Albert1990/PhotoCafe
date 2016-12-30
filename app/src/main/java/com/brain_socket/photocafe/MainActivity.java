@@ -3,6 +3,7 @@ package com.brain_socket.photocafe;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -42,7 +43,7 @@ enum ViewType {List,FullScreen}
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DataStore.LanguageChangedListener{
     private RecyclerView rvProducts;
-    private ViewPager vpCategories;
+    private RecyclerView rvCategories;
     private ArrayList<CategoryModel> categories;
     //private CategoryModel selectedCategory;
     private int selectedCategoryIndex = 0;
@@ -79,8 +80,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void init(){
         try {
+            setOrientation();
             rvProducts = (RecyclerView) findViewById(R.id.rvProducts);
-            vpCategories = (ViewPager) findViewById(R.id.vpCategories);
+            rvCategories = (RecyclerView) findViewById(R.id.rvCategories);
             tvCartProductsCount = (TextView) findViewById(R.id.tvCartProductsCount);
             View ivCart = findViewById(R.id.ivCart);
             btnEnglish = findViewById(R.id.btnEnglish);
@@ -113,28 +115,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-//    private void setCustomActionBar(){
-//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-//        getSupportActionBar().setDisplayShowCustomEnabled(true);
-//        getSupportActionBar().setCustomView(R.layout.custom_action_bar_main_activity);
-//        View view = getSupportActionBar().getCustomView();
-//        View btnLanguage = view.findViewById(R.id.btnLanguage);
-//        tvCartProductsCount = (TextView)view.findViewById(R.id.tvCartProductsCount);
-//        View ivCart = view.findViewById(R.id.ivCart);
-//
-//        btnLanguage.setOnClickListener(this);
-////        ivCart.setOnTouchListener(new View.OnTouchListener() {
-////            private static final int MAX_CLICK_DURATION = 200;
-////            private long startClickTime;
-////
-////            @Override
-////            public boolean onTouch(View v, MotionEvent event) {
-////                switch (event.getAction()) {
-////                }
-////                return true;
-////            }
-////        });
-//    }
+    private void setOrientation(){
+        if(getResources().getBoolean(R.bool.portrait_only)){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+        else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
+    }
+
+    private void handleLanguageButtonsDisplay(){
+        PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
+        if(!PhotoCafeApp.isTablet()) {
+            if (currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
+                btnEnglish.setVisibility(View.VISIBLE);
+                btnArabic.setVisibility(View.INVISIBLE);
+            } else {
+                btnEnglish.setVisibility(View.INVISIBLE);
+                btnArabic.setVisibility(View.VISIBLE);
+            }
+        }
+    }
 
     private void bindUserData(){
         try {
@@ -146,15 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             rvProducts.setVisibility(View.GONE);
             vpProducts.setVisibility(View.VISIBLE);
 
-            PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
-            if(currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
-                btnEnglish.setVisibility(View.VISIBLE);
-                btnArabic.setVisibility(View.INVISIBLE);
-            }
-            else {
-                btnEnglish.setVisibility(View.INVISIBLE);
-                btnArabic.setVisibility(View.VISIBLE);
-            }
+            handleLanguageButtonsDisplay();
 
             diagTableNo = new DiagTableNo(this,tableNoDiagCallBack);
             rlCartContents.setVisibility(View.GONE);
@@ -175,9 +168,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             productsAdapter.updateAdapter();
             handleProductsView();
 
-            categoriesAdapter = new CategoryAdapter();
-            vpCategories.setAdapter(categoriesAdapter);
+            if(PhotoCafeApp.isTablet())
+                rvCategories.setLayoutManager(new GridLayoutManager(this,1));
+            else
+                rvCategories.setLayoutManager(new GridLayoutManager(this,3));
+            categoriesAdapter = new CategoryAdapter(this);
+            rvCategories.setAdapter(categoriesAdapter);
             categoriesAdapter.updateAdapter();
+            rvCategories.scheduleLayoutAnimation();
 
             rvCartItems.setLayoutManager(new GridLayoutManager(this, 1));
             cartProductsAdapter = new CartProductsAdapter(this);
@@ -272,19 +270,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     };
 
-    private void toggleLanguage(){
+    private void toggleLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE lang){
         try {
             TextViewCustomFont.resetFonts();
-            PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
-            if (currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
-                btnEnglish.setVisibility(View.INVISIBLE);
-                btnArabic.setVisibility(View.VISIBLE);
-                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.EN);
-            } else {
-                btnEnglish.setVisibility(View.VISIBLE);
-                btnArabic.setVisibility(View.INVISIBLE);
-                PhotoCafeApp.setLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.AR);
-            }
+            PhotoCafeApp.setLanguage(lang);
+            handleLanguageButtonsDisplay();
             getIntent().putExtra("selectedCategory", categories.get(selectedCategoryIndex).getJsonString());
             recreate();
         }catch (Exception ex){
@@ -312,10 +302,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int viewId = v.getId();
         switch (viewId){
             case R.id.btnEnglish:
-                toggleLanguage();
+                toggleLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.EN);
                 break;
             case R.id.btnArabic:
-                toggleLanguage();
+                toggleLanguage(PhotoCafeApp.SUPPORTED_LANGUAGE.AR);
                 break;
             case R.id.tvReset:
                 resetCart();
@@ -475,13 +465,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    class CategoryAdapter extends PagerAdapter implements View.OnClickListener {
-        private Context context;
+    private class CategoryAdapter extends RecyclerView.Adapter<CategoryViewHolderItem> {
         private LayoutInflater inflater;
 
-        public CategoryAdapter() {
-            this.context = PhotoCafeApp.getAppContext();
-            this.inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        public CategoryAdapter(Context context) {
+            inflater = LayoutInflater.from(context);
         }
 
         public void updateAdapter() {
@@ -494,73 +482,153 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-            View v = null;
-            try {
-                v = inflater.inflate(R.layout.item_category_view_pager, container, false);
-                ImageView ivCategory = (ImageView) v.findViewById(R.id.ivCategory);
-                TextView tvCategory = (TextView) v.findViewById(R.id.tvCategory);
-                v.setTag(position);
-                v.setOnClickListener(this);
-
-                if(selectedCategoryIndex == position)
-                    ivCategory.setBackgroundResource(R.drawable.shape_brown_light_button_badge);
-                else
-                    ivCategory.setBackgroundResource(R.drawable.shape_brown_dark_button_badge);
-
-                CategoryModel categoryModel = categories.get(position);
-                tvCategory.setText(categoryModel.getName());
-                PhotoProvider.getInstance().displayPhotoNormal(categoryModel.getIcon(), ivCategory);
-                container.addView(v);
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-            return v;
+        public CategoryViewHolderItem onCreateViewHolder(ViewGroup parent, int viewType) {
+            View root = inflater.inflate(R.layout.item_category_view_pager, parent, false);
+            CategoryViewHolderItem holder = new CategoryViewHolderItem(root);
+            root.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        selectedCategoryIndex = (int) v.getTag();
+                        CategoryModel selectedCategory = categories.get(selectedCategoryIndex);
+                        categoriesAdapter.updateAdapter();
+                        tvCategory.setText(selectedCategory.getName());
+                        products = selectedCategory.getProducts();
+                        productsAdapter.updateAdapter();
+                        productsFullScreenAdapter.updateAdapter();
+                        handleProductsView();
+                    }catch (Exception ex){
+                        ex.printStackTrace();
+                    }
+                }
+            });
+            return holder;
         }
 
         @Override
-        public int getCount() {
+        public void onBindViewHolder(CategoryViewHolderItem holder, int position) {
+            try {
+                final CategoryModel model = categories.get(position);
+                holder.root.setTag(position);
+                PhotoProvider.getInstance().displayPhotoNormal(model.getIcon(), holder.ivCategory);
+                holder.tvCategory.setText(model.getName());
+
+                if(selectedCategoryIndex == position)
+                    holder.ivCategory.setBackgroundResource(R.drawable.shape_brown_light_button_badge);
+                else
+                    holder.ivCategory.setBackgroundResource(R.drawable.shape_brown_dark_button_badge);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
+
+        @Override
+        public int getItemCount() {
             if (categories == null)
                 return 0;
             return categories.size();
         }
+    }
 
-        @Override
-        public float getPageWidth(int position) {
-            return 0.333f;
-        }
+    private static class CategoryViewHolderItem extends RecyclerView.ViewHolder {
+        public View root;
+        public ImageView ivCategory;
+        public TextView tvCategory;
 
-        @Override
-        public boolean isViewFromObject(View view, Object object) {
-            return view == object;
-        }
-
-        @Override
-        public void destroyItem(ViewGroup container, int position, Object view) {
-            container.removeView((View) view);
-        }
-
-        @Override
-        public int getItemPosition(Object object) {
-            return POSITION_NONE;
-        }
-
-        @Override
-        public void onClick(View v) {
-            try {
-                selectedCategoryIndex = (int) v.getTag();
-                CategoryModel selectedCategory = categories.get(selectedCategoryIndex);
-                categoriesAdapter.updateAdapter();
-                tvCategory.setText(selectedCategory.getName());
-                products = selectedCategory.getProducts();
-                productsAdapter.updateAdapter();
-                productsFullScreenAdapter.updateAdapter();
-                handleProductsView();
-            }catch (Exception ex){
-                ex.printStackTrace();
-            }
+        public CategoryViewHolderItem(View v) {
+            super(v);
+            root = v;
+            ivCategory = (ImageView) v.findViewById(R.id.ivCategory);
+            tvCategory = (TextView) v.findViewById(R.id.tvCategory);
         }
     }
+
+//    class CategoryAdapter extends PagerAdapter implements View.OnClickListener {
+//        private Context context;
+//        private LayoutInflater inflater;
+//
+//        public CategoryAdapter() {
+//            this.context = PhotoCafeApp.getAppContext();
+//            this.inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+//        }
+//
+//        public void updateAdapter() {
+//            try {
+//                if (categories != null)
+//                    notifyDataSetChanged();
+//            } catch (Exception ex) {
+//                ex.printStackTrace();
+//            }
+//        }
+//
+//        @Override
+//        public Object instantiateItem(ViewGroup container, int position) {
+//            View v = null;
+//            try {
+//                v = inflater.inflate(R.layout.item_category_view_pager, container, false);
+//                ImageView ivCategory = (ImageView) v.findViewById(R.id.ivCategory);
+//                TextView tvCategory = (TextView) v.findViewById(R.id.tvCategory);
+//                v.setTag(position);
+//                v.setOnClickListener(this);
+//
+//                if(selectedCategoryIndex == position)
+//                    ivCategory.setBackgroundResource(R.drawable.shape_brown_light_button_badge);
+//                else
+//                    ivCategory.setBackgroundResource(R.drawable.shape_brown_dark_button_badge);
+//
+//                CategoryModel categoryModel = categories.get(position);
+//                tvCategory.setText(categoryModel.getName());
+//                PhotoProvider.getInstance().displayPhotoNormal(categoryModel.getIcon(), ivCategory);
+//                container.addView(v);
+//            } catch (Exception ex) {
+//                ex.printStackTrace();
+//            }
+//            return v;
+//        }
+//
+//        @Override
+//        public int getCount() {
+//            if (categories == null)
+//                return 0;
+//            return categories.size();
+//        }
+//
+//        @Override
+//        public float getPageWidth(int position) {
+//            return 0.333f;
+//        }
+//
+//        @Override
+//        public boolean isViewFromObject(View view, Object object) {
+//            return view == object;
+//        }
+//
+//        @Override
+//        public void destroyItem(ViewGroup container, int position, Object view) {
+//            container.removeView((View) view);
+//        }
+//
+//        @Override
+//        public int getItemPosition(Object object) {
+//            return POSITION_NONE;
+//        }
+//
+//        @Override
+//        public void onClick(View v) {
+//            try {
+//                selectedCategoryIndex = (int) v.getTag();
+//                CategoryModel selectedCategory = categories.get(selectedCategoryIndex);
+//                categoriesAdapter.updateAdapter();
+//                tvCategory.setText(selectedCategory.getName());
+//                products = selectedCategory.getProducts();
+//                productsAdapter.updateAdapter();
+//                productsFullScreenAdapter.updateAdapter();
+//                handleProductsView();
+//            }catch (Exception ex){
+//                ex.printStackTrace();
+//            }
+//        }
+//    }
 
     private class CartProductsAdapter extends RecyclerView.Adapter<CartProductViewHolderItem> implements View.OnClickListener{
         private LayoutInflater inflater;

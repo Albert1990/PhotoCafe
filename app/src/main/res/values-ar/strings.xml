@@ -2,7 +2,7 @@
     <string name="app_name">PhotoCafe</string>
 
     <!-- SplashScreenActivity -->
-    <string name="activity_splash_screen_copy_right">الحقوق محفوظة @ 2016</string>
+    <string name="activity_splash_screen_copy_right">الحقوق@2016</string>
 
     <!-- LanguageSelectActivity -->
     <string name="activity_language_select_title">اختر اللغة</string>
@@ -24,5 +24,8 @@
     <string name="diag_table_no_btn_proceed">متابعة</string>
     <string name="diag_table_no_field_required">حقل مطلوب</string>
     <string name="diag_table_no_field_hint">رقم طاولتك</string>
+
+    <!-- SelectCategoryActivity -->
+    <string name="activity_select_category_title">ماذا تحب أن تختار؟</string>
 
 </resources>

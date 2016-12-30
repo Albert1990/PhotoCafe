@@ -1,6 +1,7 @@
 package com.brain_socket.photocafe;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -17,6 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
 
     private void init(){
+        setOrientation();
         DataStore.getInstance().requestCategories(new DataStore.DataRequestCallback() {
             @Override
             public void onDataReady(ServerResult result, boolean success) {
@@ -26,5 +28,14 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void setOrientation(){
+        if(getResources().getBoolean(R.bool.portrait_only)){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+        else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
     }
 }

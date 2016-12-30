@@ -1,6 +1,62 @@
 [
     {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item_product_full_screen.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/item_product_full_screen.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/diag_table_no.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/diag_table_no.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/slide_drawer_cart_contents.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/slide_drawer_cart_contents.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item_category.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/item_category.xml"
+    },
+    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout-sw600dp/design_layout_snackbar.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/activity_main.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/row_cart_product.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/row_cart_product.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/activity_select_language.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/activity_select_language.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/layout_loading_diag.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/layout_loading_diag.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/activity_select_category.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/activity_select_category.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/item_category_view_pager.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/item_category_view_pager.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/row_product.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/row_product.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/custom_action_bar_main_activity.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/custom_action_bar_main_activity.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/custom_action_bar_select_category.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/custom_action_bar_select_category.xml"
+    },
+    {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/activity_splash_screen.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/layout-sw600dp/activity_splash_screen.xml"
     }
 ]

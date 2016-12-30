@@ -2,6 +2,7 @@ package com.brain_socket.photocafe;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class SelectCategoryActivity extends AppCompatActivity implements DataSto
     }
 
     void init(){
+        setOrientation();
         rvCategories = (RecyclerView)findViewById(R.id.rvCategories);
         View btnArabic = findViewById(R.id.btnArabic);
         View btnEnglish  = findViewById(R.id.btnEnglish);
@@ -47,12 +49,24 @@ public class SelectCategoryActivity extends AppCompatActivity implements DataSto
 
     void bindUserData(){
         DataStore.getInstance().addLanguageChangedListener(this);
-        rvCategories.setLayoutManager(new GridLayoutManager(this, 2));
+        if(PhotoCafeApp.isTablet())
+            rvCategories.setLayoutManager(new GridLayoutManager(this, 4));
+        else
+            rvCategories.setLayoutManager(new GridLayoutManager(this, 2));
         categoriesAdapter = new CategoriesRecycleViewAdapter(this);
         rvCategories.setAdapter(categoriesAdapter);
         rvCategories.scheduleLayoutAnimation();
         categories = DataStore.getInstance().getCategories();
         categoriesAdapter.updateAdapter();
+    }
+
+    private void setOrientation(){
+        if(getResources().getBoolean(R.bool.portrait_only)){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+        else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
     }
 
 //    private void setCustomActionBar(){

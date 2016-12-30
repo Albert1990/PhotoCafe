@@ -1,6 +1,7 @@
 package com.brain_socket.photocafe;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,11 +17,21 @@ public class SelectLanguageActivity extends AppCompatActivity implements View.On
     }
 
     void init(){
-        Button btnArabic = (Button)findViewById(R.id.btnArabic);
-        Button btnEnglish = (Button)findViewById(R.id.btnEnglish);
+        setOrientation();
+        View btnArabic = findViewById(R.id.btnArabic);
+        View btnEnglish = findViewById(R.id.btnEnglish);
 
         btnArabic.setOnClickListener(this);
         btnEnglish.setOnClickListener(this);
+    }
+
+    private void setOrientation(){
+        if(getResources().getBoolean(R.bool.portrait_only)){
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+        else {
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
     }
 
     @Override

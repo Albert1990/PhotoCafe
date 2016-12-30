@@ -1,5 +1,13 @@
-CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/SelectCategoryActivity$CategoriesRecycleViewAdapter$1$override.class
-CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/SelectCategoryActivity$CategoriesRecycleViewAdapter$override.class
-CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/SelectCategoryActivity$override.class
-CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/SelectCategoryActivity$CategoryViewHolderItem$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$ProductsRecycleViewAdapter$1$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$ProductsFullScreenAdapter$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$CategoryAdapter$override.class
 CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$CartProductsAdapter$1$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$ProductsRecycleViewAdapter$2$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$ProductViewHolderItem$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$CategoryViewHolderItem$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$CartProductsAdapter$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$ProductsRecycleViewAdapter$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$CartProductViewHolderItem$override.class
+CHANGED,/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/brain_socket/photocafe/MainActivity$CategoryAdapter$1$override.class

@@ -6,6 +6,7 @@ import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
@@ -66,6 +67,10 @@ public class PhotoCafeApp extends Application{
         }else{
             setLanguage(userSelectedLang);
         }
+    }
+
+    public static boolean isTablet(){
+        return !appContext.getResources().getBoolean(R.bool.portrait_only);
     }
 
     public static PhotoCafeApp getAppContext() {

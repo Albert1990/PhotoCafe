@@ -12,6 +12,7 @@
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_closeDialogWhenTouchOutside">true</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
+    <bool name="portrait_only">true</bool>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
@@ -338,13 +339,14 @@
     <string name="activity_language_select_btn_arabic">العربية</string>
     <string name="activity_language_select_btn_english">English</string>
     <string name="activity_language_select_title">Select your language</string>
-    <string name="activity_main_activity_no_products">No Foods in this category</string>
+    <string name="activity_main_activity_no_products">No items in this category</string>
     <string name="activity_main_cart_contents_empty">You have not ordered anything yet!</string>
     <string name="activity_main_cart_contents_order_label">Order</string>
     <string name="activity_main_cart_contents_quantity_label">Quantity</string>
     <string name="activity_main_cart_contents_reset_button">Reset</string>
     <string name="activity_main_cart_contents_submit_button">Submit</string>
     <string name="activity_main_cart_contents_submit_success">Your order has been submitted</string>
+    <string name="activity_select_category_title">What would you like to have?</string>
     <string name="activity_splash_screen_copy_right">Copyrights @ 2016</string>
     <string name="app_name">PhotoCafe</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
