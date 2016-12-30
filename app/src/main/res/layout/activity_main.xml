@@ -8,8 +8,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="top"
-    sothree:umanoPanelHeight="20dp"
+    sothree:umanoDragView="@+id/vCartHandle"
+    sothree:umanoOverlay="true"
+    sothree:umanoPanelHeight="80dp"
     sothree:umanoShadowHeight="0dp">
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -20,21 +23,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
+            android:layout_marginBottom="115dp"
             android:orientation="vertical">
 
-            <include layout="@layout/custom_action_bar_main_activity"></include>
+            <include layout="@layout/custom_action_bar_main_activity"/>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/rvProducts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="7dp"></android.support.v7.widget.RecyclerView>
+                android:layout_margin="7dp"
+                android:paddingTop="22dp"/>
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/vpProducts"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="115dp"></android.support.v4.view.ViewPager>
+                />
 
         </LinearLayout>
 
@@ -50,12 +55,19 @@
             android:textSize="@dimen/ts_text_big"
             app:fontId="1"/>
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:layout_gravity="bottom"
+            android:alpha="0.6"
+            android:background="@drawable/cardboard_surface"/>
+
         <com.brain_socket.photocafe.view.CarousellViewPager
             android:id="@+id/vpCategories"
             android:layout_width="match_parent"
             android:layout_height="115dp"
             android:layout_gravity="bottom"
-            android:background="@color/categories_view_pager_background"></com.brain_socket.photocafe.view.CarousellViewPager>
+            />
 
     </FrameLayout>
 
@@ -63,6 +75,8 @@
         android:id="@+id/cartContentSlider"
         layout="@layout/slide_drawer_cart_contents"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_gravity="top"></include>
+        android:layout_height="500dp"
+        android:layout_gravity="top"
+        android:background="@android:color/transparent"
+        />
 </com.sothree.slidinguppanel.SlidingUpPanelLayout>

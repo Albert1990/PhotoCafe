@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
@@ -91,6 +92,8 @@ public class PhotoCafeApp extends Application{
                     android.content.res.Configuration conf = res.getConfiguration();
                     String locale = getLocale();
                     conf.locale = new Locale(locale.toLowerCase());
+                    if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
+                        conf.setLayoutDirection(conf.locale);
                     res.updateConfiguration(conf, dm);
                     DataStore.getInstance().broadcastLanguageChanged();
                 }

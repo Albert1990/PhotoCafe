@@ -10,7 +10,8 @@
     <string name="activity_language_select_btn_arabic">العربية</string>
 
     <!-- MainActivity -->
-    <string name="activity_main_activity_no_products">No Foods in this category</string>
+
+    <string name="activity_main_activity_no_products">No items in this category</string>
     <string name="activity_main_cart_contents_order_label">Order</string>
     <string name="activity_main_cart_contents_quantity_label">Quantity</string>
     <string name="activity_main_cart_contents_reset_button">Reset</string>

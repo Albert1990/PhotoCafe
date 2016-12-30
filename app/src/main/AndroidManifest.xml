@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.brain_socket.photocafe">
+<manifest package="com.brain_socket.photocafe"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:name=".PhotoCafeApp"
@@ -9,21 +9,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppThemeDark">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="layoutDirection|locale"
             android:theme="@style/AppThemeNoActionBar"></activity>
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
             android:name=".SelectLanguageActivity"
+            android:configChanges="layoutDirection|locale"
             android:theme="@style/AppThemeNoActionBar"/>
-        <activity android:name=".SelectCategoryActivity"
+        <activity
+            android:name=".SelectCategoryActivity"
+            android:configChanges="layoutDirection|locale"
             android:theme="@style/AppThemeNoActionBar"></activity>
     </application>
 

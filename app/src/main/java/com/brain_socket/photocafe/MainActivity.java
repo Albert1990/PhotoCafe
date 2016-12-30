@@ -139,8 +139,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void bindUserData(){
         try {
             DataStore.getInstance().addLanguageChangedListener(this);
-            currentViewType = ViewType.List;
-            vpProducts.setVisibility(View.GONE);
+
+            // initial state
+            currentViewType = ViewType.FullScreen;
+            ivViewType.setImageResource(R.drawable.ic_list);
+            rvProducts.setVisibility(View.GONE);
+            vpProducts.setVisibility(View.VISIBLE);
 
             PhotoCafeApp.SUPPORTED_LANGUAGE currentLanguage = PhotoCafeApp.getCurrentLanguage();
             if(currentLanguage == PhotoCafeApp.SUPPORTED_LANGUAGE.AR) {
