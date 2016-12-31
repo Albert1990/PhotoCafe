@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- text size -->
+    <dimen name="ts_text_xxsmall">14sp</dimen>
+    <dimen name="ts_text_xsmall">15sp</dimen>
+    <dimen name="ts_text_small">17sp</dimen>
+    <dimen name="ts_text_normal">19sp</dimen>
+    <dimen name="ts_text_big">21sp</dimen>
+    <dimen name="ts_title_small">23sp</dimen>
+    <dimen name="ts_title_normal">25sp</dimen>
+    <dimen name="ts_title_big">27sp</dimen>
+    <dimen name="ts_title_xbig">33sp</dimen>
+    <dimen name="ts_title_xxbig">39sp</dimen>
+
+    <dimen name="corner_radius_big">15dp</dimen>
+    <dimen name="corner_radius_normal">10dp</dimen>
+    <dimen name="corner_radius_small">5dp</dimen>
+
+</resources>

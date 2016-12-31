@@ -3,18 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="450dp"
+    android:layout_height="550dp"
+    android:background="@android:color/transparent"
+    android:paddingBottom="10dp"
     android:paddingLeft="0dp"
     android:paddingRight="0dp"
     android:paddingTop="4dp"
-    android:paddingBottom="10dp"
-    android:background="@android:color/transparent">
+    android:clipChildren="false">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="65dp"
         android:scaleType="fitXY"
-        android:layout_marginBottom="60dp"
         android:src="@drawable/paper_bg"/>
 
     <ImageView
@@ -22,9 +23,9 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_gravity="top|right"
-        android:padding="9dp"
-        android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:padding="9dp"
         android:src="@drawable/close_icon"/>
 
     <RelativeLayout
@@ -38,51 +39,56 @@
             android:id="@+id/tvOrderLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_margin="10dp"
-            android:textSize="@dimen/ts_title_small"
-            android:textColor="@color/txt_black"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginLeft="70dp"
             android:text="@string/activity_main_cart_contents_order_label"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/ts_title_small"
             app:fontId="3"/>
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="top|right"
             android:layout_marginEnd="100dp"
             android:layout_marginRight="100dp"
-            android:textSize="@dimen/ts_title_small"
-            android:textColor="@color/txt_black"
-            android:layout_gravity="top|right"
+            android:layout_marginTop="10dp"
             android:text="@string/activity_main_cart_contents_quantity_label"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/ts_title_small"
             app:fontId="3"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rvCartItems"
             android:layout_width="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="85dp"
-            android:layout_height="190dp"
-            android:layout_below="@+id/tvOrderLabel"></android.support.v7.widget.RecyclerView>
+            android:layout_height="250dp"
+            android:layout_below="@+id/tvOrderLabel"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginEnd="70dp"/>
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvReset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:layout_below="@id/rvCartItems"
+            android:gravity="center_horizontal"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="16dp"
             android:padding="6dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:textSize="@dimen/ts_title_small"
-            android:textColor="@color/txt_light_yellow"
             android:text="@string/activity_main_cart_contents_reset_button"
+            android:textColor="@color/txt_light_yellow"
+            android:textSize="@dimen/ts_title_small"
             app:fontId="3"/>
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
@@ -90,16 +96,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
             android:layout_below="@id/rvCartItems"
-            android:padding="8dp"
-            android:layout_marginRight="105dp"
-            android:layout_marginEnd="105dp"
-            android:layout_marginTop="10dp"
-            android:textSize="@dimen/ts_title_small"
-            android:textColor="@color/txt_white"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/shape_submit_button_bg"
+            android:padding="8dp"
             android:text="@string/activity_main_cart_contents_submit_button"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/ts_title_small"
             app:fontId="3"/>
 
     </RelativeLayout>
@@ -110,22 +114,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
-        android:textSize="@dimen/ts_text_normal"
-        android:textColor="@color/txt_light_yellow"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
         android:text="@string/activity_main_cart_contents_empty"
+        android:textColor="@color/txt_light_yellow"
+        android:textSize="@dimen/ts_text_normal"
         app:fontId="3"/>
 
     <FrameLayout
         android:id="@+id/vCartHandle"
-        android:layout_width="70dp"
-        android:layout_height="100dp"
-        android:layout_marginRight="30dp"
+        android:layout_width="65dp"
+        android:layout_height="120dp"
         android:layout_gravity="bottom|right|end"
+        android:layout_marginRight="30dp"
         android:layout_marginEnd="30dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:clipToPadding="false">
 
         <ImageView
             android:id="@+id/ivCart"
@@ -139,18 +145,18 @@
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvCartProductsCount"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_gravity="bottom|left|start"
-            android:layout_marginLeft="3dp"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="-12dp"
+            android:layout_marginLeft="-12dp"
             android:background="@drawable/shape_cart_products_count_bg"
+            android:clipChildren="false"
             android:gravity="center"
             android:text="0"
             android:textColor="@color/txt_white"
             android:textSize="@dimen/ts_text_small"
             app:fontId="1"/>
     </FrameLayout>
-
 
 </FrameLayout>

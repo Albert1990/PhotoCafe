@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/ivProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"/>
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
 
     <RelativeLayout
         android:id="@+id/rlContent"
@@ -17,33 +18,34 @@
         android:layout_gravity="bottom|right"
         android:layout_marginBottom="50dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/shape_product_full_screen_bg"
+        android:paddingBottom="20dp"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="20dp"
-        android:background="@drawable/shape_product_full_screen_bg">
+        android:paddingTop="10dp">
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/brown_light"
             android:textSize="@dimen/ts_text_small"
             android:textStyle="bold"
-            android:textColor="@color/brown_light"
             app:fontId="2"/>
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvProduct"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/tvPrice"
-            android:layout_marginTop="15dp"
-            android:textSize="@dimen/ts_text_big"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="22dp"
             android:textColor="@color/txt_light_yellow"
+            android:textSize="@dimen/ts_text_big"
             app:fontId="3"/>
 
         <View
@@ -52,27 +54,28 @@
             android:layout_height="10dp"
             android:layout_below="@id/tvProduct"
             android:layout_marginTop="5dp"
-            android:background="@drawable/dots"></View>
+            android:background="@drawable/dots"/>
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@id/ivDots"
             android:layout_marginTop="15dp"
-            android:textSize="@dimen/ts_text_small"
-            android:textColor="@color/txt_white"
             android:maxLines="4"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/ts_text_small"
             app:fontId="1"/>
 
         <ImageView
             android:id="@+id/ivAdd"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_marginTop="10dp"
             android:layout_alignParentLeft="true"
             android:layout_below="@id/tvDescription"
+            android:layout_marginTop="10dp"
             android:src="@drawable/btn_add"/>
 
     </RelativeLayout>

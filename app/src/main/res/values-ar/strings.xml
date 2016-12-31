@@ -2,7 +2,7 @@
     <string name="app_name">PhotoCafe</string>
 
     <!-- SplashScreenActivity -->
-    <string name="activity_splash_screen_copy_right">الحقوق@2016</string>
+    <string name="activity_splash_screen_copy_right">جميع الحقوق محفوظة©</string>
 
     <!-- LanguageSelectActivity -->
     <string name="activity_language_select_title">اختر اللغة</string>

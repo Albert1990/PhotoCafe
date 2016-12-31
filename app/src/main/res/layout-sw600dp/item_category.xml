@@ -6,11 +6,10 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingTop="10dp"
     android:paddingBottom="10dp"
     android:paddingLeft="45dp"
-    android:paddingRight="45dp">
-
+    android:paddingRight="45dp"
+    android:paddingTop="10dp">
 
     <com.brain_socket.photocafe.view.RoundedImageView
         android:id="@+id/ivCategory"
@@ -19,7 +18,7 @@
         android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true"
         android:background="@drawable/shape_rounded_category_light_bg"
-        android:src="@drawable/ic_carousel"/>
+        />
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/tvCategory"
@@ -27,10 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
+        android:lines="1"
+        android:maxLines="1"
         android:paddingTop="7dp"
         android:text="---"
-        android:maxLines="1"
-        android:lines="1"
         android:textColor="@color/brown_light"
         android:textSize="@dimen/ts_text_big"
         app:fontId="2"/>

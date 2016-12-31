@@ -67,7 +67,6 @@
         android:layout_marginTop="2dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:background="@drawable/dots"
-        android:visibility="gone"></View>
+        android:background="@drawable/dots"></View>
 
 </RelativeLayout>

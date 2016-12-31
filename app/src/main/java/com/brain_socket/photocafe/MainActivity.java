@@ -2,24 +2,19 @@ package com.brain_socket.photocafe;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,16 +27,16 @@ import com.brain_socket.photocafe.model.OrderModel;
 import com.brain_socket.photocafe.model.ProductModel;
 import com.brain_socket.photocafe.view.RoundedImageView;
 import com.brain_socket.photocafe.view.TextViewCustomFont;
+import com.sothree.slidinguppanel.SlidingUpPanelLayout;
+import com.sothree.slidinguppanel.SlidingUpPanelLayout.PanelState;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
-enum ViewType {List,FullScreen}
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DataStore.LanguageChangedListener{
+
+    enum ViewType {List,FullScreen}
+
     private RecyclerView rvProducts;
     private RecyclerView rvCategories;
     private ArrayList<CategoryModel> categories;
@@ -66,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager vpProducts;
     private ViewType currentViewType;
     private ProductsFullScreenAdapter productsFullScreenAdapter;
+    private View vCartHandle;
+    private SlidingUpPanelLayout slidingLayout;
 
     ImageView ivViewType;
 
@@ -98,6 +95,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             vpProducts = (ViewPager)findViewById(R.id.vpProducts);
             ivViewType = (ImageView) findViewById(R.id.ivViewType);
             View ivClose = findViewById(R.id.ivClose);
+            vCartHandle = findViewById(R.id.vCartHandle);
+            slidingLayout = (SlidingUpPanelLayout) findViewById(R.id.sliding_layout);
 
             cartProducts = new ArrayList<CartProductModel>();
             loadingDialog = PhotoCafeApp.getNewLoadingDilaog(this);
@@ -109,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tvSubmit.setOnClickListener(this);
             ivViewType.setOnClickListener(this);
             ivClose.setOnClickListener(this);
+            vCartHandle.setOnClickListener(this);
 
         }catch (Exception ex){
             ex.printStackTrace();
@@ -168,16 +168,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             productsAdapter.updateAdapter();
             handleProductsView();
 
-            if(PhotoCafeApp.isTablet())
-                rvCategories.setLayoutManager(new GridLayoutManager(this,1));
-            else
-                rvCategories.setLayoutManager(new GridLayoutManager(this,3));
+            // categories picker
+            LinearLayoutManager categoriesLayoutManager;
+            if(PhotoCafeApp.isTablet()){
+                categoriesLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+            }else {
+                categoriesLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+            }
+            rvCategories.setLayoutManager(categoriesLayoutManager);
             categoriesAdapter = new CategoryAdapter(this);
             rvCategories.setAdapter(categoriesAdapter);
             categoriesAdapter.updateAdapter();
             rvCategories.scheduleLayoutAnimation();
 
-            rvCartItems.setLayoutManager(new GridLayoutManager(this, 1));
+            // cart items list
+            rvCartItems.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
             cartProductsAdapter = new CartProductsAdapter(this);
             rvCartItems.setAdapter(cartProductsAdapter);
 
@@ -313,14 +318,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.tvSubmit:
                 submitCart();
                 break;
-            case R.id.ivCart:
-                //cartContentSlider.setVisibility(View.VISIBLE);
-                break;
             case R.id.ivViewType:
                 changeViewType();
                 break;
             case R.id.ivClose:
-
+                if(slidingLayout.getPanelState() == PanelState.EXPANDED){
+                    slidingLayout.setPanelState(PanelState.COLLAPSED);
+                }
+                break;
+            case R.id.ivCart:
+            case R.id.vCartHandle:
+                if(slidingLayout.getPanelState() == PanelState.EXPANDED){
+                    slidingLayout.setPanelState(PanelState.COLLAPSED);
+                }else{
+                    slidingLayout.setPanelState(PanelState.EXPANDED);
+                }
                 break;
         }
     }
@@ -428,6 +440,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         try {
                             int selectedProductIndex = (int)v.getTag();
                             addProductToCart(selectedProductIndex);
+                            Animation animPop = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_anim);
+                            v.startAnimation(animPop);
+                            tvCartProductsCount.startAnimation(animPop);
                         }catch (Exception ex){
                             ex.printStackTrace();
                         }
@@ -704,6 +719,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     if(m.getQuantity() <= 0)
                         cartProducts.remove(m);
+
+                    tvCartProductsCount.setText(Integer.toString(getCartProductsCount()));
                 }
                 cartProductsAdapter.updateAdapter();
             }catch (Exception ex){
@@ -800,6 +817,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(v.getId() == R.id.ivAdd){
                     int selectedProductIndex = (int)v.getTag();
                     addProductToCart(selectedProductIndex);
+                    Animation animPop = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.pop_anim);
+                    v.startAnimation(animPop);
+                    tvCartProductsCount.startAnimation(animPop);
                 }
             }catch (Exception ex){
                 ex.printStackTrace();

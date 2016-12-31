@@ -60,13 +60,15 @@
             android:layout_height="115dp"
             android:layout_gravity="bottom"
             android:alpha="0.6"
+            android:scaleType="fitXY"
             android:background="@drawable/cardboard_surface"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rvCategories"
             android:layout_width="match_parent"
             android:layout_height="115dp"
-            android:layout_gravity="bottom"></android.support.v7.widget.RecyclerView>
+            android:paddingTop="8dp"
+            android:layout_gravity="bottom"/>
 
     </FrameLayout>
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="vertical">
 
 
     <ImageView
@@ -12,19 +12,21 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/shape_brown_dark_button_badge"
-        android:src="@drawable/ic_carousel"/>
+        android:layout_marginTop="4dp"
+        android:background="@drawable/shape_brown_dark_button_badge"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/tvCategory"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/ts_text_normal"
         android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
         android:paddingTop="5dp"
-        android:textColor="@color/txt_brown_dark"
         android:text="---"
+        android:textColor="@color/txt_brown_dark"
+        android:textSize="@dimen/ts_text_normal"
         app:fontId="3"/>
 
 </LinearLayout>

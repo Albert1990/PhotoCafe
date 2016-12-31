@@ -8,15 +8,16 @@
         android:id="@+id/ivProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"/>
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/>
 
     <RelativeLayout
         android:id="@+id/rlContent"
-        android:layout_width="180dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginBottom="90dp"
+        android:layout_marginRight="50dp"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         android:paddingTop="10dp"
@@ -29,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:textSize="@dimen/ts_text_small"
             android:textStyle="bold"
             android:textColor="@color/brown_light"
@@ -36,11 +38,9 @@
 
         <com.brain_socket.photocafe.view.TextViewCustomFont
             android:id="@+id/tvProduct"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@id/tvPrice"
             android:layout_marginTop="15dp"
             android:textSize="@dimen/ts_text_big"
             android:textColor="@color/txt_light_yellow"
@@ -81,8 +81,8 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="bottom|right"
-        android:layout_marginBottom="30dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="20dp"
         android:src="@drawable/decoration_cam"/>
 
 </FrameLayout>
