@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown_dark"
+    tools:context=".SelectCategoryActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/side_logo"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/lblTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:layout_marginTop="-35dp"
+        android:gravity="center"
+        android:text="@string/activity_select_category_title"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/ts_text_big"
+        app:fontId="2"/>
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="320dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-170dp"
+        android:layout_marginRight="-55dp"
+        android:src="@drawable/bg_artwork"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCategories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lblTitle"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dp"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal">
+
+
+        <com.brain_socket.photocafe.view.TextViewCustomFont
+            android:id="@+id/btnEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/activity_language_select_btn_english"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/ts_text_normal"
+            app:fontId="1"/>
+
+        <com.brain_socket.photocafe.view.TextViewCustomFont
+            android:id="@+id/btnArabic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/activity_language_select_btn_arabic"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/ts_text_normal"
+            app:fontId="1"/>
+
+    </LinearLayout>
+
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:lines="1"
+        android:text="@string/activity_splash_screen_copy_right"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/ts_text_xsmall"
+        app:fontId="1"/>
+
+</RelativeLayout>

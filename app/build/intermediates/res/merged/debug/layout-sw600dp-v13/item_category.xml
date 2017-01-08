@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="45dp"
+    android:paddingRight="45dp"
+    android:paddingTop="10dp">
+
+    <com.brain_socket.photocafe.view.RoundedImageView
+        android:id="@+id/ivCategory"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center_horizontal"
+        android:adjustViewBounds="true"
+        android:background="@drawable/shape_rounded_category_light_bg"
+        />
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvCategory"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:lines="1"
+        android:maxLines="1"
+        android:paddingTop="7dp"
+        android:text="---"
+        android:textColor="@color/brown_light"
+        android:textSize="@dimen/ts_text_big"
+        app:fontId="2"/>
+
+</LinearLayout>

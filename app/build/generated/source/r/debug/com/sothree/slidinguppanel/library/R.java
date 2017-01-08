@@ -26,9 +26,9 @@ public final class R {
 		public static final int umanoShadowHeight = 0x7f01007d;
 	}
 	public static final class dimen {
-		public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f090075;
-		public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f090076;
-		public static final int item_touch_helper_swipe_escape_velocity = 0x7f090077;
+		public static final int item_touch_helper_max_drag_scroll_per_frame = 0x7f09007f;
+		public static final int item_touch_helper_swipe_escape_max_velocity = 0x7f090080;
+		public static final int item_touch_helper_swipe_escape_velocity = 0x7f090081;
 	}
 	public static final class drawable {
 		public static final int above_shadow = 0x7f020045;

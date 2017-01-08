@@ -15,6 +15,7 @@ public class DiagTableNo extends Dialog implements View.OnClickListener{
     private Context context;
     private TableNoDiagCallBack callback;
     private EditText etTableNo;
+    private EditText etPassword;
 
     public DiagTableNo(Context context,TableNoDiagCallBack callback) {
         super(context);
@@ -27,6 +28,7 @@ public class DiagTableNo extends Dialog implements View.OnClickListener{
 
     private void init(){
         etTableNo = (EditText)findViewById(R.id.etTableNo);
+        etPassword = (EditText)findViewById(R.id.etPassword);
         View tvProceed = findViewById(R.id.tvProceed);
 
         tvProceed.setOnClickListener(this);
@@ -38,19 +40,25 @@ public class DiagTableNo extends Dialog implements View.OnClickListener{
         if(viewId == R.id.tvProceed){
             boolean cancel = false;
             String tableNo = etTableNo.getText().toString().trim();
+            String password = etPassword.getText().toString().trim();
             if(tableNo.isEmpty()){
                 cancel = true;
                 etTableNo.setError(context.getString(R.string.diag_table_no_field_required));
                 etTableNo.requestFocus();
             }
+            if(password.isEmpty()){
+                cancel = true;
+                etPassword.setError(context.getString(R.string.diag_table_no_field_required));
+                etPassword.requestFocus();
+            }
             if(!cancel){
-                callback.onClose(tableNo);
+                callback.onClose(tableNo,password);
 
             }
         }
     }
 
     public interface TableNoDiagCallBack{
-        void onClose(String tableNo);
+        void onClose(String tableNo,String password);
     }
 }

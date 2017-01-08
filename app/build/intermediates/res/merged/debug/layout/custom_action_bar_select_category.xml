@@ -40,6 +40,7 @@
             android:layout_width="85dp"
             android:layout_height="35dp"
             android:background="@drawable/shape_brown_dark_button_badge"
+            android:textColor="@color/white"
             android:text="@string/activity_language_select_btn_english"/>
 
         <Button
@@ -47,7 +48,9 @@
             android:layout_width="85dp"
             android:layout_height="35dp"
             android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
             android:background="@drawable/shape_brown_dark_button_badge"
+            android:textColor="@color/white"
             android:text="@string/activity_language_select_btn_arabic"/>
 
     </LinearLayout>

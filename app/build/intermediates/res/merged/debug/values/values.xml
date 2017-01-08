@@ -386,6 +386,7 @@
     <string name="diag_table_no_field_hint">Your table No</string>
     <string name="diag_table_no_field_required">required</string>
     <string name="diag_table_no_header">Enter your table number please</string>
+    <string name="diag_table_password">Password</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

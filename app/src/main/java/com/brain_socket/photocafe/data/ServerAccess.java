@@ -80,7 +80,7 @@ public class ServerAccess {
         return result;
     }
 
-    public ServerResult submitCart(ArrayList<CartProductModel> cartProducts,String tableNo) {
+    public ServerResult submitCart(ArrayList<CartProductModel> cartProducts,String tableNo,String password) {
         ServerResult result = new ServerResult();
         try{
             JSONObject jsonToSend = new JSONObject();
@@ -88,6 +88,7 @@ public class ServerAccess {
             for(CartProductModel m : cartProducts)
                 cartProductsJsonArr.put(m.getJsonObject());
             jsonToSend.put("TableNo",tableNo);
+            jsonToSend.put("Password",password);
             jsonToSend.put("Products",cartProductsJsonArr.toString());
 
             String url = BASE_SERVICE_URL+"/addOrder.php?valuesString=" + jsonToSend.toString();

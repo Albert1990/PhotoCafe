@@ -25,6 +25,7 @@
     <string name="diag_table_no_btn_proceed">Proceed</string>
     <string name="diag_table_no_field_required">required</string>
     <string name="diag_table_no_field_hint">Your table No</string>
+    <string name="diag_table_password">Password</string>
 
     <!-- SelectCategoryActivity -->
     <string name="activity_select_category_title">What would you like to have?</string>

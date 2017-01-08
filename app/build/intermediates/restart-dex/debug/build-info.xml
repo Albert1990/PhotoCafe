@@ -2,9 +2,9 @@
 <instant-run
     abi="x86"
     api-level="16"
-    density="tvdpi"
+    density="hdpi"
     format="7"
-    timestamp="18007366268383"
+    timestamp="42605640277611"
     token="-283866633429592068" >
 
     <task
@@ -21,18 +21,13 @@
         duration="0" />
 
     <artifact
-        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/resources-debug.ap_"
-        type="RESOURCES" />
+        location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="17979012583602" >
+    <build timestamp="42605640277611" >
         <artifact
             location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="18007366268383" >
-        <artifact
-            location="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/resources-debug.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>

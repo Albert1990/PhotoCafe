@@ -197,11 +197,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private DiagTableNo.TableNoDiagCallBack tableNoDiagCallBack = new DiagTableNo.TableNoDiagCallBack() {
         @Override
-        public void onClose(String tableNo) {
+        public void onClose(String tableNo,String password) {
             diagTableNo.dismiss();
             if(cartProducts.size() > 0){
                 loadingDialog.show();
-                DataStore.getInstance().attemptSubmitCart(cartProducts,tableNo,submitCartCallback);
+                DataStore.getInstance().attemptSubmitCart(cartProducts,tableNo,password,submitCartCallback);
             }
         }
     };

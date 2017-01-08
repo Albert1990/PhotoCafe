@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/brown_dark"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                tools:context="com.brain_socket.photocafe.SelectLanguageActivity">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="320dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-170dp"
+        android:layout_marginRight="-55dp"
+        android:src="@drawable/bg_artwork"/>
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/lang_select_logo"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvLanguageSelectorLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/activity_language_select_title"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/ts_text_normal"
+        app:fontId="2"/>
+
+    <LinearLayout
+        android:id="@+id/llLanguageButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLanguageSelectorLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <com.brain_socket.photocafe.view.TextViewCustomFont
+            android:id="@+id/btnEnglish"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/shape_brown_light_button_badge"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/activity_language_select_btn_english"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/ts_text_small"
+            app:fontId="2"/>
+
+        <com.brain_socket.photocafe.view.TextViewCustomFont
+            android:id="@+id/btnArabic"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_brown_light_button_badge"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/activity_language_select_btn_arabic"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/ts_text_small"
+            app:fontId="2"/>
+    </LinearLayout>
+
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="@string/activity_splash_screen_copy_right"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/ts_text_small"
+        app:fontId="2"/>
+
+</RelativeLayout>

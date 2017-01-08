@@ -30,7 +30,14 @@
                     "endOffset": 163
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 233,
+                        "endColumn": 68,
+                        "endOffset": 297
+                    }
                 }
             },
             {
@@ -42,7 +49,14 @@
                     "endOffset": 233
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 302,
+                        "endColumn": 69,
+                        "endOffset": 367
+                    }
                 }
             },
             {
@@ -54,7 +68,14 @@
                     "endOffset": 307
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 372,
+                        "endColumn": 73,
+                        "endOffset": 441
+                    }
                 }
             },
             {
@@ -66,7 +87,14 @@
                     "endOffset": 383
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 446,
+                        "endColumn": 75,
+                        "endOffset": 517
+                    }
                 }
             },
             {
@@ -78,7 +106,14 @@
                     "endOffset": 442
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 700,
+                        "endColumn": 58,
+                        "endOffset": 754
+                    }
                 }
             },
             {
@@ -90,7 +125,14 @@
                     "endOffset": 513
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 937,
+                        "endColumn": 70,
+                        "endOffset": 1003
+                    }
                 }
             },
             {
@@ -102,7 +144,14 @@
                     "endOffset": 581
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1008,
+                        "endColumn": 67,
+                        "endOffset": 1071
+                    }
                 }
             },
             {
@@ -110,120 +159,438 @@
                     "startLine": 10,
                     "startColumn": 4,
                     "startOffset": 586,
-                    "endColumn": 69,
-                    "endOffset": 651
+                    "endColumn": 48,
+                    "endOffset": 630
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 496,
+                        "endColumn": 48,
+                        "endOffset": 540
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 656,
-                    "endColumn": 70,
-                    "endOffset": 722
+                    "startOffset": 635,
+                    "endColumn": 51,
+                    "endOffset": 682
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 545,
+                        "endColumn": 51,
+                        "endOffset": 592
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 727,
-                    "endColumn": 71,
-                    "endOffset": 794
+                    "startOffset": 687,
+                    "endColumn": 49,
+                    "endOffset": 732
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 597,
+                        "endColumn": 49,
+                        "endOffset": 642
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 799,
-                    "endColumn": 57,
-                    "endOffset": 852
+                    "startOffset": 737,
+                    "endColumn": 69,
+                    "endOffset": 802
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 227,
+                        "endColumn": 69,
+                        "endOffset": 292
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 857,
-                    "endColumn": 57,
-                    "endOffset": 910
+                    "startOffset": 807,
+                    "endColumn": 70,
+                    "endOffset": 873
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 297,
+                        "endColumn": 70,
+                        "endOffset": 363
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 915,
-                    "endColumn": 105,
-                    "endOffset": 1016
+                    "startOffset": 878,
+                    "endColumn": 71,
+                    "endOffset": 945
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 368,
+                        "endColumn": 71,
+                        "endOffset": 435
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 1021,
-                    "endColumn": 63,
-                    "endOffset": 1080
+                    "startOffset": 950,
+                    "endColumn": 57,
+                    "endOffset": 1003
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 440,
+                        "endColumn": 57,
+                        "endOffset": 493
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 1085,
-                    "endColumn": 54,
-                    "endOffset": 1135
+                    "startOffset": 1008,
+                    "endColumn": 57,
+                    "endOffset": 1061
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 498,
+                        "endColumn": 57,
+                        "endOffset": 551
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 1140,
-                    "endColumn": 62,
-                    "endOffset": 1198
+                    "startOffset": 1066,
+                    "endColumn": 105,
+                    "endOffset": 1167
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 556,
+                        "endColumn": 105,
+                        "endOffset": 657
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1203,
-                    "endLine": 22,
-                    "endColumn": 12,
-                    "endOffset": 1380
+                    "startOffset": 1172,
+                    "endColumn": 63,
+                    "endOffset": 1231
                 },
                 "from": {
-                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml"
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 662,
+                        "endColumn": 63,
+                        "endOffset": 721
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1236,
+                    "endColumn": 42,
+                    "endOffset": 1274
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 224,
+                        "endColumn": 42,
+                        "endOffset": 262
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1279,
+                    "endColumn": 45,
+                    "endOffset": 1320
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 178,
+                        "endColumn": 45,
+                        "endOffset": 219
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1325,
+                    "endColumn": 44,
+                    "endOffset": 1365
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 133,
+                        "endColumn": 44,
+                        "endOffset": 173
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1370,
+                    "endColumn": 45,
+                    "endOffset": 1411
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 87,
+                        "endColumn": 45,
+                        "endOffset": 128
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1416,
+                    "endColumn": 46,
+                    "endOffset": 1458
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 40,
+                        "endColumn": 46,
+                        "endOffset": 82
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1463,
+                    "endColumn": 43,
+                    "endOffset": 1502
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 360,
+                        "endColumn": 43,
+                        "endOffset": 399
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1507,
+                    "endColumn": 46,
+                    "endOffset": 1549
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 313,
+                        "endColumn": 46,
+                        "endOffset": 355
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1554,
+                    "endColumn": 45,
+                    "endOffset": 1595
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 267,
+                        "endColumn": 45,
+                        "endOffset": 308
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1600,
+                    "endColumn": 44,
+                    "endOffset": 1640
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 404,
+                        "endColumn": 44,
+                        "endOffset": 444
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1645,
+                    "endColumn": 45,
+                    "endOffset": 1686
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/values-sw600dp/dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 449,
+                        "endColumn": 45,
+                        "endOffset": 490
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1691,
+                    "endColumn": 54,
+                    "endOffset": 1741
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1076,
+                        "endColumn": 54,
+                        "endOffset": 1126
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1746,
+                    "endColumn": 62,
+                    "endOffset": 1804
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 898,
+                        "endColumn": 62,
+                        "endOffset": 956
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 32,
+                    "startColumn": 4,
+                    "startOffset": 1809,
+                    "endLine": 35,
+                    "endColumn": 12,
+                    "endOffset": 1986
+                },
+                "from": {
+                    "file": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/values-sw600dp/values-sw600dp.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1133,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 1310
+                    }
                 }
             }
         ]

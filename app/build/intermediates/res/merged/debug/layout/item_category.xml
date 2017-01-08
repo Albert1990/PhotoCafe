@@ -2,35 +2,33 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
-    android:paddingLeft="30dp"
-    android:paddingRight="30dp">
-
+    android:orientation="vertical">
 
     <com.brain_socket.photocafe.view.RoundedImageView
         android:id="@+id/ivCategory"
         android:layout_width="90dp"
         android:layout_height="90dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true"
-        android:background="@drawable/shape_rounded_category_light_bg"
-        android:src="@drawable/ic_carousel"/>
+        android:background="@drawable/shape_rounded_category_light_bg"/>
 
     <com.brain_socket.photocafe.view.TextViewCustomFont
         android:id="@+id/tvCategory"
         android:layout_width="88dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
         android:gravity="center_horizontal"
+        android:lines="1"
+        android:maxLines="1"
         android:paddingTop="7dp"
         android:text="---"
-        android:maxLines="1"
-        android:lines="1"
         android:textColor="@color/txt_light_yellow"
         android:textSize="@dimen/ts_text_big"
         app:fontId="3"/>

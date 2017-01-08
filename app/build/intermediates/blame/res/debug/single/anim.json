@@ -12,6 +12,10 @@
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/anim/design_snackbar_in.xml"
     },
     {
+        "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/anim/pop_anim.xml",
+        "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/src/main/res/anim/pop_anim.xml"
+    },
+    {
         "merged": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
         "source": "/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/anim/abc_slide_in_top.xml"
     },

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/ivViewType"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_carousel"/>
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="500dp"
+        android:layout_height="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/ivViewType"
+        android:layout_toEndOf="@id/ivViewType"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/dots"/>
+
+    <com.brain_socket.photocafe.view.TextViewCustomFont
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ivViewType"
+        android:layout_toEndOf="@id/ivViewType"
+        android:layout_above="@id/seperator"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="Category"
+        android:textColor="@color/txt_light_yellow"
+        android:textSize="@dimen/ts_title_xxbig"
+        app:fontId="3"/>
+
+</RelativeLayout>

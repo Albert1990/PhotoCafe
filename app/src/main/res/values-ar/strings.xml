@@ -24,6 +24,7 @@
     <string name="diag_table_no_btn_proceed">متابعة</string>
     <string name="diag_table_no_field_required">حقل مطلوب</string>
     <string name="diag_table_no_field_hint">رقم طاولتك</string>
+    <string name="diag_table_password">كلمة المرور</string>
 
     <!-- SelectCategoryActivity -->
     <string name="activity_select_category_title">ماذا تحب أن تختار؟</string>

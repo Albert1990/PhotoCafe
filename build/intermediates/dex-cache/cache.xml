@@ -1,2 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_45bc210c0750873410aed77fbd3df5ed0c95c939.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_d22384e14270c23a38727fcd257aa75ac521c22b.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_a07605688a42bac3587adf010bc94f064f8129b8.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_f48dee73e9450b30477333e14cb3bcfda33e1ea5.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.6.2/f1bc476cc167b18e66c297df599b2377131a8947/gson-2.6.2.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f1bc476cc167b18e66c297df599b2377131a8947">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/gson-2.6.2_cf6b727d26a8c4ed4d639ec0e182f9f99ea29465.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="6f65c144283b31b4b9a70e6e7aa4c4a1c897d4b8">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-9.0.0_d1079b6245beb2c2be96180f18179774417b9733.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="bd144f4136347c208ec364a7e6f2815241866723">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e447ebd45a0647fdb155d96b05f39f8cb6c58f98.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="82e992df25f7942e83347a26f1b59813c3e2ad67">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/instant-run_f29fc38c61cc72018aad26e665e976e5637ac135.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.1.1_dcdad80263a0b3ec4f8af0b7fa106cce4b579e2c.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="373cd65725af2781d100ddc193c7d3f14464a774">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-impl-9.0.0_989d46055dce8c8938c2efc1beb797bfdd79cdbc.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="b8bedab61b3b5238cd9a07d3b04449d7fecdbc3b">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-9.0.0_a2128561039de75eadab1a3f4f2ced9200c7efe0.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.0.0_e48e67ad99676226c96ba23a3ab234c5d89c480c.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_d0083161b53c8e6316bd166d0e1fd546a5227e7b.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.0.0_b44c0bb8a39ca7128f3304069b6db100a5befa28.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.sothree.slidinguppanel/library/3.3.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ab8a4903076897a8fe029433ba0c3c3f958712ce">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.sothree.slidinguppanel-library-3.3.1_dd70a6c2d2a8682eacf9d8360818ff170d6bb715.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="1941832901fc4e7a93300b53762e9f65d7650b99">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.0.0_02214325e8ce1bdfeff4d9e59f685a58e82aebb5.jar" />
+    </item>
+    <item
+        jar="/Users/Albert/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.4/dd9eeb557650c4ad7394df23f0f5cf27a7cfc697/universal-image-loader-1.9.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="dd9eeb557650c4ad7394df23f0f5cf27a7cfc697">
+        <dex dex="/Users/Albert/AndroidStudioProjects/PhotoCafe/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.4_348d0c22f6f1b866caff18540df3ba84496f11ff.jar" />
+    </item>
+
+</items>
